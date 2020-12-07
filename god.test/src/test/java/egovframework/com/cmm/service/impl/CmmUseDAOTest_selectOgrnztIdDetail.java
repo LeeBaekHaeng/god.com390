@@ -6,8 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
@@ -17,8 +15,6 @@ import egovframework.com.cmm.service.EgovCmmUseService;
 import god.test.GodTestAbstract;
 
 public class CmmUseDAOTest_selectOgrnztIdDetail extends GodTestAbstract {
-
-	protected Logger egovLogger = LoggerFactory.getLogger(CmmUseDAOTest_selectOgrnztIdDetail.class);
 
 	@Autowired
 	@Qualifier("EgovCmmUseService")
