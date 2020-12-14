@@ -44,4 +44,12 @@ public class FileManageDAOTest {
 		}
 	}
 
+	public void deleteFileInf(FileVO fvo) {
+		try {
+			fileManageDAO.deleteFileInf(fvo);
+		} catch (Exception e) {
+			egovLogger.error(e.getMessage());
+		}
+	}
+
 }
