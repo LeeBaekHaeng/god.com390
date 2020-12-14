@@ -36,4 +36,12 @@ public class FileManageDAOTest {
 		}
 	}
 
+	public void deleteFileInfs(List<?> fileList) {
+		try {
+			fileManageDAO.deleteFileInfs(fileList);
+		} catch (Exception e) {
+			egovLogger.error(e.getMessage());
+		}
+	}
+
 }
