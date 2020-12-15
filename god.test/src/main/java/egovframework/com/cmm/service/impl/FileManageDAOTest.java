@@ -1,5 +1,6 @@
 package egovframework.com.cmm.service.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -49,6 +50,15 @@ public class FileManageDAOTest {
 			fileManageDAO.deleteFileInf(fvo);
 		} catch (Exception e) {
 			egovLogger.error(e.getMessage());
+		}
+	}
+
+	public List<FileVO> selectFileInfs(FileVO vo) {
+		try {
+			return fileManageDAO.selectFileInfs(vo);
+		} catch (Exception e) {
+			egovLogger.error(e.getMessage());
+			return new ArrayList<>();
 		}
 	}
 
