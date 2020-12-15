@@ -16,8 +16,15 @@ class DemoApplicationTests {
 
 	private static final Logger log = LoggerFactory.getLogger(DemoApplicationTests.class);
 
+//	@Autowired
+//	private CustomerRepository customerRepository;
+
+	private final CustomerRepository customerRepository;
+
 	@Autowired
-	private CustomerRepository customerRepository;
+	public DemoApplicationTests(CustomerRepository customerRepository) {
+		this.customerRepository = customerRepository;
+	}
 
 	@Test
 	void contextLoads() {
