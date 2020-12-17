@@ -62,4 +62,14 @@ public class FileManageDAOTest {
 		}
 	}
 
+	public FileVO selectFileInf(FileVO fvo)  {
+		try {
+			return fileManageDAO.selectFileInf(fvo);
+		} catch (Exception e) {
+			egovLogger.error(e.getMessage());
+//			return new FileVO();
+			return null;
+		}
+	}
+	
 }
