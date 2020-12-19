@@ -25,15 +25,15 @@ class CustomerCrudRepositoryTest_A3_findById {
 
 	@Test
 	void test() {
-		Optional<Customer> result = repository.findById(16L);
+		Optional<Customer> result = repository.findById(6L);
 
-		log.info("resultCustomer: {}", result);
-		log.info("empty: {}", result.empty());
+		log.debug("resultCustomer: {}", result);
+		log.debug("empty: {}", result.empty());
 		if (result.isPresent()) {
-			log.info("get: {}", result.get());
-			log.info("getId: {}", result.get().getId());
-			log.info("getFirstName: {}", result.get().getFirstName());
-			log.info("getLastName: {}", result.get().getLastName());
+			log.debug("get: {}", result.get());
+			log.debug("getId: {}", result.get().getId());
+			log.debug("getFirstName: {}", result.get().getFirstName());
+			log.debug("getLastName: {}", result.get().getLastName());
 		}
 	}
 
