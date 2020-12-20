@@ -46,4 +46,21 @@ public class CustomerSpecs {
 		};
 	}
 
+	public static Specification<Customer> spec2(Customer customer) {
+		return (root, query, builder) -> {
+
+			List<Predicate> restrictions = new ArrayList<>();
+
+			if (StringUtils.hasLength(customer.getFirstName())) {
+				restrictions.add(builder.like(root.get("firstName"), customer.getFirstName() + "%"));
+			}
+
+			if (StringUtils.hasLength(customer.getLastName())) {
+				restrictions.add(builder.equal(root.get("lastName"), customer.getLastName()));
+			}
+
+			return builder.and(restrictions.toArray(new Predicate[0]));
+		};
+	}
+
 }

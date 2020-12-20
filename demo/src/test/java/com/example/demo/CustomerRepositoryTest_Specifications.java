@@ -32,6 +32,9 @@ class CustomerRepositoryTest_Specifications {
 
 		customers = repository.findAll(CustomerSpecs.spec(customer));
 		log.debug("customers: {}", customers);
+
+		customers = repository.findAll(CustomerSpecs.spec2(customer));
+		log.debug("customers: {}", customers);
 	}
 
 }
