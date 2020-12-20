@@ -26,31 +26,60 @@ public class CustomerRestController {
 		return repository.findAll(CustomerSpecs.spec2(customer));
 	}
 
-	@GetMapping("/{id}/search/test1")
-	public Map<String, Object> searchTest1(@PathVariable("id") Long id, Customer customer) {
+	@GetMapping("/search")
+	public Map<String, Object> search(Customer customer) {
 		Map<String, Object> map = new HashMap<>();
-
-		map.put("id", id);
 		map.put("customer", customer);
-		map.put("test1", "test1");
-
+		map.put("search", "search");
 		return map;
 	}
 
-	@GetMapping("/{id}/search/test2")
-	public Map<String, Object> searchTest2(@PathVariable("id") Long id, Customer customer) {
+	@GetMapping("/search2")
+	public Map<String, Object> search2(Customer customer) {
 		Map<String, Object> map = new HashMap<>();
+		map.put("customer", customer);
+		map.put("search2", "search2");
+		return map;
+	}
 
-		map.put("id", id);
+//	@GetMapping("/{id}/search/test1")
+	@GetMapping("/search/test1")
+	public Map<String, Object> searchTest1(Customer customer) {
+		Map<String, Object> map = new HashMap<>();
+		map.put("customer", customer);
+		map.put("test1", "test1");
+		return map;
+	}
+
+//	@GetMapping("/{id}/search/test2")
+	@GetMapping("/search/test2")
+	public Map<String, Object> searchTest2(Customer customer) {
+		Map<String, Object> map = new HashMap<>();
 		map.put("customer", customer);
 		map.put("test2", "test2");
-
 		return map;
 	}
 
 	@GetMapping("/{id}")
-	public Customer getOne(@PathVariable("id") Long id) {
-		return repository.getOne(id);
+//	public Customer getOne(@PathVariable("id") Long id) {
+	public Customer getOne(@PathVariable("id") String id) {
+		return repository.getOne(Long.valueOf(id));
+	}
+
+	@GetMapping("/{id}/findByFirstName")
+	public Map<String, Object> findByFirstName(@PathVariable("id") String id, Customer customer) {
+		Map<String, Object> map = new HashMap<>();
+		map.put("customer", customer);
+		map.put("findByFirstName", "findByFirstName");
+		return map;
+	}
+
+	@GetMapping("/{id}/findByLastName")
+	public Map<String, Object> findByLastName(@PathVariable("id") String id, Customer customer) {
+		Map<String, Object> map = new HashMap<>();
+		map.put("customer", customer);
+		map.put("findByLastName", "findByLastName");
+		return map;
 	}
 
 }
