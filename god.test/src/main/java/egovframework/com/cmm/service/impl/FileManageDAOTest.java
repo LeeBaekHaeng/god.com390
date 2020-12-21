@@ -80,4 +80,13 @@ public class FileManageDAOTest {
 		}
 	}
 
+	public List<FileVO> selectFileListByFileNm(FileVO fvo) {
+		try {
+			return fileManageDAO.selectFileListByFileNm(fvo);
+		} catch (Exception e) {
+			egovLogger.error(e.getMessage());
+			return null;
+		}
+	}
+
 }

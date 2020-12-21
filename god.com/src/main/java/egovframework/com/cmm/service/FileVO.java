@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
+import egovframework.com.cmm.ComDefaultVO;
+
 /**
  * @Class Name : FileVO.java
  * @Description : 파일정보 처리를 위한 VO 클래스
@@ -20,7 +22,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
  *
  */
 @SuppressWarnings("serial")
-public class FileVO implements Serializable {
+public class FileVO extends ComDefaultVO implements Serializable  {
 
     /**
      * 첨부파일 아이디
@@ -58,6 +60,9 @@ public class FileVO implements Serializable {
      * 저장파일명
      */
     public String streFileNm = "";
+
+    public String searchCnd;
+    public String searchWrd;
 
     /**
      * atchFileId attribute를 리턴한다.
@@ -230,11 +235,27 @@ public class FileVO implements Serializable {
 	this.streFileNm = streFileNm;
     }
 
+	public String getSearchCnd() {
+		return searchCnd;
+	}
+
+	public void setSearchCnd(String searchCnd) {
+		this.searchCnd = searchCnd;
+	}
+
+	public String getSearchWrd() {
+		return searchWrd;
+	}
+
+	public void setSearchWrd(String searchWrd) {
+		this.searchWrd = searchWrd;
+	}
+
     /**
      * toString 메소드를 대치한다.
      */
     public String toString() {
 	return ToStringBuilder.reflectionToString(this);
     }
-	
+
 }
