@@ -62,7 +62,7 @@ public class FileManageDAOTest {
 		}
 	}
 
-	public FileVO selectFileInf(FileVO fvo)  {
+	public FileVO selectFileInf(FileVO fvo) {
 		try {
 			return fileManageDAO.selectFileInf(fvo);
 		} catch (Exception e) {
@@ -71,5 +71,13 @@ public class FileManageDAOTest {
 			return null;
 		}
 	}
-	
+
+	public void deleteAllFileInf(FileVO fvo) {
+		try {
+			fileManageDAO.deleteAllFileInf(fvo);
+		} catch (Exception e) {
+			egovLogger.error(e.getMessage());
+		}
+	}
+
 }
