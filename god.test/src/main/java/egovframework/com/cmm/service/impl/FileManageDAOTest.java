@@ -89,4 +89,13 @@ public class FileManageDAOTest {
 		}
 	}
 
+	public int selectFileListCntByFileNm(FileVO fvo) {
+		try {
+			return fileManageDAO.selectFileListCntByFileNm(fvo);
+		} catch (Exception e) {
+			egovLogger.error(e.getMessage());
+			return 0;
+		}
+	}
+
 }
