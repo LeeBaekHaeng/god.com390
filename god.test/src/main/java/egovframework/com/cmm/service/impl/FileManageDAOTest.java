@@ -98,4 +98,13 @@ public class FileManageDAOTest {
 		}
 	}
 
+	public List<FileVO> selectImageFileList(FileVO vo) {
+		try {
+			return fileManageDAO.selectImageFileList(vo);
+		} catch (Exception e) {
+			egovLogger.error(e.getMessage());
+			return null;
+		}
+	}
+
 }
