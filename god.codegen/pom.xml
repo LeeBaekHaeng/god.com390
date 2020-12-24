@@ -473,6 +473,19 @@
 		</dependency>
 
 		<dependency>
+			<groupId>god</groupId>
+			<artifactId>test</artifactId>
+			<version>1.0.0</version>
+			<classifier>classes</classifier>
+		</dependency>
+		<dependency>
+			<groupId>god</groupId>
+			<artifactId>test</artifactId>
+			<version>1.0.0</version>
+			<type>war</type>
+		</dependency>
+
+		<dependency>
 			<groupId>egovframework.dev.imp</groupId>
 			<artifactId>templates</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
