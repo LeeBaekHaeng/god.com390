@@ -22,6 +22,14 @@ public class GodTablesMapperTest extends GodTestAbstract {
 		List<EgovMap> tables = godTablesMapper.selectList();
 
 		egovLogger.debug("tables: {}", tables);
+		egovLogger.debug("size: {}", tables.size());
+
+		for (EgovMap table : tables) {
+			egovLogger.debug("table: {}", table);
+			egovLogger.debug("tableSchema: {}", table.get("tableSchema"));
+			egovLogger.debug("tableName: {}", table.get("tableName"));
+			egovLogger.debug("tableComment: {}", table.get("tableComment"));
+		}
 	}
 
 }
