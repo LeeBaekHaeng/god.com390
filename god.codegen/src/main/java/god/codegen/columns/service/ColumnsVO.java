@@ -1,9 +1,9 @@
-package god.codegen.tables.service;
+package god.codegen.columns.service;
 
 import java.util.List;
 
 @SuppressWarnings("serial")
-public class TablesVO extends Tables {
+public class ColumnsVO extends Columns {
 
 	public List<String> tableNames;
 

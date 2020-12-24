@@ -18,7 +18,7 @@ public class GodTablesDAO {
 	}
 
 	public List<EgovMap> selectList(TablesVO vo) {
-		return mapper.selectList();
+		return mapper.selectList(vo);
 	}
 
 }

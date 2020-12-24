@@ -1,0 +1,135 @@
+##
+#set($voPackage="${package}.service")
+#set($voClassName="${entity.pcName}VO")
+#set($daoPackage="${package}.service.impl")
+#set($daoClassName="${entity.pcName}DAO")
+#set($daoName="${entity.ccName}DAO")
+#set($daoInstanceName="${entity.ccName}DAO")
+##
+##
+#set($namespace="$entity.pcName")
+#set($resultMapId="${entity.ccName}")
+#set($resultMapClass="${voPackage}.${voClassName}")
+##
+##
+#set($insertQueryId="${daoInstanceName}.insert${entity.pcName}_S")
+#set($updateQueryId="${daoInstanceName}.update${entity.pcName}_S")
+#set($deleteQueryId="${daoInstanceName}.delete${entity.pcName}_S")
+#set($selectQueryId="${daoInstanceName}.select${entity.pcName}_S")
+#set($selectListQueryId="${daoInstanceName}.select${entity.pcName}List_D")
+#set($selectListTotCntQueryId="${daoInstanceName}.select${entity.pcName}ListTotCnt_S")
+##
+##
+##
+## ##################################################################################################
+INSERT INTO ${entity.name} /* ${entity.tableComment} */
+#set($i=0)	
+#foreach($attribute in $attributes)
+#if($i == 0)
+	( ${attribute.name} /* ${attribute.columnComment} */
+#elseif($i < ($attributes.size() - 1))
+	  , ${attribute.name} /* ${attribute.columnComment} */
+#else
+	  , ${attribute.name} ) / ${attribute.columnComment} */
+#end
+#set($i=$i+1)
+#end
+##
+#set($i=0)	
+#foreach($attribute in $attributes)
+#if($i == 0)
+VALUES ( '${attribute.columnComment}' /* ${attribute.columnType} ${attribute.columnKey} ${attribute.columnComment} */
+#elseif($i < ($attributes.size() - 1))
+	  , '${attribute.columnComment}' /* ${attribute.columnType} ${attribute.columnKey} ${attribute.columnComment} */
+#else
+	  , '${attribute.columnComment}' ) /* ${attribute.columnType} ${attribute.columnKey} ${attribute.columnComment} */
+#end
+#set($i=$i+1)
+#end
+;
+
+## ##################################################################################################	
+UPDATE ${entity.name} /* ${entity.tableComment} */
+#set($i=0)	
+#foreach($attribute in $attributes)
+#if($i == 0)
+SET ${attribute.name} = '${attribute.columnComment}' /* ${attribute.columnType} ${attribute.columnKey} ${attribute.columnComment} */
+#else
+	, ${attribute.name} = '${attribute.columnComment}' /* ${attribute.columnType} ${attribute.columnKey} ${attribute.columnComment} */
+#end
+#set($i=$i+1)
+#end	
+##		
+#set($i=0)	
+#foreach($attribute in $primaryKeys)
+#if($i == 0)
+WHERE ${attribute.name} = '${attribute.columnComment}' /* ${attribute.columnType} ${attribute.columnKey} ${attribute.columnComment} */
+#else
+	AND ${attribute.name} = '${attribute.columnComment}' /* ${attribute.columnType} ${attribute.columnKey} ${attribute.columnComment} */
+#end
+#set($i=$i+1)
+#end
+;
+
+## ##################################################################################################
+DELETE FROM ${entity.name} /* ${entity.tableComment} */
+#set($i=0)	
+#foreach($attribute in $primaryKeys)
+#if($i == 0)
+WHERE ${attribute.name} = '${attribute.columnComment}' /* ${attribute.columnType} ${attribute.columnKey} ${attribute.columnComment} */
+#else
+	AND ${attribute.name} = '${attribute.columnComment}' /* ${attribute.columnType} ${attribute.columnKey} ${attribute.columnComment} */
+#end
+#set($i=$i+1)
+#end
+;
+
+## ##################################################################################################	
+SELECT
+#set($i=0)	
+#foreach($attribute in $attributes)
+#if($i == 0)
+	${attribute.name} /* ${attribute.columnType} ${attribute.columnKey} ${attribute.columnComment} */
+#else
+	, ${attribute.name} /* ${attribute.columnType} ${attribute.columnKey} ${attribute.columnComment} */
+#end
+#set($i=$i+1)
+#end				
+FROM ${entity.name} /* ${entity.tableComment} */
+#set($i=0)	
+#foreach($attribute in $primaryKeys)
+#if($i == 0)
+WHERE ${attribute.name} = '${attribute.columnComment}' /* ${attribute.columnType} ${attribute.columnKey} ${attribute.columnComment} */
+#else
+	AND ${attribute.name} = '${attribute.columnComment}' /* ${attribute.columnType} ${attribute.columnKey} ${attribute.columnComment} */
+#end
+#set($i=$i+1)
+#end
+;
+
+## ##################################################################################################	
+SELECT
+#set($i=0)	
+#foreach($attribute in $attributes)
+#if($i == 0)
+	${attribute.name} /* ${attribute.columnType} ${attribute.columnKey} ${attribute.columnComment} */
+#else
+	, ${attribute.name} /* ${attribute.columnType} ${attribute.columnKey} ${attribute.columnComment} */
+#end
+#set($i=$i+1)
+#end	
+FROM ${entity.name} /* ${entity.tableComment} */
+WHERE 1=1
+	AND ${attributes.get(0).name} = '${attributes.get(0).columnComment}' /* ${attributes.get(0).columnType} ${attributes.get(0).columnKey} ${attributes.get(0).columnComment} */
+##	AND ${attributes.get(1).name} LIKE '%' || '${attributes.get(1).columnComment}' || '%' /* ${attributes.get(1).columnType} ${attributes.get(1).columnKey} ${attributes.get(1).columnComment} */
+##ORDER BY ID DESC
+##LIMIT #recordCountPerPage# OFFSET #firstIndex#
+;
+
+## ##################################################################################################	
+SELECT COUNT(*) totcnt
+FROM ${entity.name} /* ${entity.tableComment} */
+WHERE 1=1
+	AND ${attributes.get(0).name} = '${attributes.get(0).columnComment}' /* ${attributes.get(0).columnType} ${attributes.get(0).columnKey} ${attributes.get(0).columnComment} */
+##	AND ${attributes.get(1).name} LIKE '%' || '${attributes.get(1).columnComment}' || '%' /* ${attributes.get(1).columnType} ${attributes.get(1).columnKey} ${attributes.get(1).columnComment} */
+;
