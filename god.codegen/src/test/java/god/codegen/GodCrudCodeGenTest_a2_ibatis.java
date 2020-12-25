@@ -1,14 +1,12 @@
 package god.codegen;
 
 import java.io.File;
-import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.collections.MapUtils;
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.SystemUtils;
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -26,9 +24,9 @@ import model.DataModelContext;
 import model.Entity;
 import operation.CrudCodeGen;
 
-public class GodCrudCodeGenTest_a1_sql extends GodTestAbstract {
+public class GodCrudCodeGenTest_a2_ibatis extends GodTestAbstract {
 
-	protected Logger egovLogger = LoggerFactory.getLogger(GodCrudCodeGenTest_a1_sql.class);
+	protected Logger egovLogger = LoggerFactory.getLogger(GodCrudCodeGenTest_a2_ibatis.class);
 
 	private CrudCodeGen crudCodeGen;
 //	private DataModelContext dataModel;
@@ -110,7 +108,7 @@ public class GodCrudCodeGenTest_a1_sql extends GodTestAbstract {
 			dataModel.setAttributes(attributes);
 			dataModel.setPrimaryKeys(primaryKeys);
 
-			String result = generate(dataModel, "templates/crud/src/main/resources/pkg/sql-a1-all.vm");
+			String result = generate(dataModel, "eGovFrameTemplates/crud/resource/pkg/EgovSample_Sample2_SQL.vm");
 
 			writeStringToFile(dataModel, tableSchema, result);
 		}
@@ -138,8 +136,8 @@ public class GodCrudCodeGenTest_a1_sql extends GodTestAbstract {
 	private void writeStringToFile(DataModelContext dataModel, String tableSchema, String result) {
 		String pathname = SystemUtils.USER_HOME + SystemUtils.FILE_SEPARATOR + "Desktop" + SystemUtils.FILE_SEPARATOR
 				+ "god.codegen" + SystemUtils.FILE_SEPARATOR + tableSchema + SystemUtils.FILE_SEPARATOR
-				+ dataModel.getEntity().getName() + SystemUtils.FILE_SEPARATOR + dataModel.getEntity().getName()
-				+ "-a1-all.sql";
+				+ dataModel.getEntity().getName() + SystemUtils.FILE_SEPARATOR + dataModel.getEntity().getPcName()
+				+ "_SQL_" + Globals.DB_TYPE + ".xml";
 		egovLogger.debug("pathname: {}", pathname);
 
 		File file = new File(pathname);
@@ -147,11 +145,11 @@ public class GodCrudCodeGenTest_a1_sql extends GodTestAbstract {
 		Charset encoding = StandardCharsets.UTF_8;
 		egovLogger.debug("name: {}", encoding.name());
 
-		try {
-			FileUtils.writeStringToFile(file, data, encoding);
-		} catch (IOException e) {
-			egovLogger.error(e.getMessage());
-		}
+//		try {
+//			FileUtils.writeStringToFile(file, data, encoding);
+//		} catch (IOException e) {
+//			egovLogger.error(e.getMessage());
+//		}
 	}
 
 //	public void test2() throws Exception {
