@@ -27,16 +27,18 @@ class CustomerCrudRepositoryTest_A9_delete {
 
 	@Test
 	void test() {
-		log.debug("CustomerCrudRepository deleteById 테스트");
+		log.debug("CustomerCrudRepository delete 테스트");
 
-		Long id = 6L;
+		Customer entity = new Customer();
+		entity.setId(6L);
+//		entity.setId(60L);
 
-		repository.deleteById(id);
+		repository.delete(entity);
 
 		Iterable<Customer> customers = repository.findAll();
 		log.debug("customers: {}", customers);
 
-		Optional<Customer> customer = repository.findById(id);
+		Optional<Customer> customer = repository.findById(entity.getId());
 		log.debug("customer: {}", customer);
 		log.debug("isPresent: {}", customer.isPresent());
 
