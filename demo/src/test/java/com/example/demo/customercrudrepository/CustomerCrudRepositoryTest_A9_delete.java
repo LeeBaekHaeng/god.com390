@@ -14,31 +14,29 @@ import com.example.demo.Customer;
 import com.example.demo.CustomerCrudRepository;
 
 @SpringBootTest
-class CustomerCrudRepositoryTest_A8_deleteById {
+class CustomerCrudRepositoryTest_A9_delete {
 
-	private static final Logger log = LoggerFactory.getLogger(CustomerCrudRepositoryTest_A8_deleteById.class);
+	private static final Logger log = LoggerFactory.getLogger(CustomerCrudRepositoryTest_A9_delete.class);
 
 	private final CustomerCrudRepository repository;
 
 	@Autowired
-	public CustomerCrudRepositoryTest_A8_deleteById(CustomerCrudRepository repository) {
+	public CustomerCrudRepositoryTest_A9_delete(CustomerCrudRepository repository) {
 		this.repository = repository;
 	}
 
 	@Test
 	void test() {
-		log.debug("CustomerCrudRepository delete 테스트");
+		log.debug("CustomerCrudRepository deleteById 테스트");
 
-		Customer entity = new Customer();
-		entity.setId(6L);
-//		entity.setId(60L);
+		Long id = 6L;
 
-		repository.delete(entity);
+		repository.deleteById(id);
 
 		Iterable<Customer> customers = repository.findAll();
 		log.debug("customers: {}", customers);
 
-		Optional<Customer> customer = repository.findById(entity.getId());
+		Optional<Customer> customer = repository.findById(id);
 		log.debug("customer: {}", customer);
 		log.debug("isPresent: {}", customer.isPresent());
 
