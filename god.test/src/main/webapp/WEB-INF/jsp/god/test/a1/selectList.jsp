@@ -30,5 +30,8 @@
 		</c:forEach>
 	</table>
 
+	mailMsgId:
+	<c:out value="${mailMsgId}" />
+
 </body>
 </html>

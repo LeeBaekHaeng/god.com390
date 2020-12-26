@@ -8,7 +8,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
-@ContextConfiguration("classpath*:egovframework/spring/com/**/context-*.xml")
+@ContextConfiguration({ "classpath*:egovframework/spring/com/**/context-*.xml",
+		"classpath*:god/spring/test/**/context-*.xml" })
 @ActiveProfiles({ "mysql", "dummy" })
 public abstract class GodTestAbstract {
 
