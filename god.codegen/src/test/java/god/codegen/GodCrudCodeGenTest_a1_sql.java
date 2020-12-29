@@ -53,6 +53,12 @@ public class GodCrudCodeGenTest_a1_sql extends GodTestAbstract {
 		List<String> tableNames = new ArrayList<>();
 		tableNames.add("comtcadministcode");
 		tableNames.add("comtcadministcoderecptnlog");
+
+		tableNames.add("adbk");
+
+		tableNames.add("com_t_rdnmadr_zip");
+
+//		tableNames = null;
 		vo.setTableNames(tableNames);
 
 		List<EgovMap> tables = godTablesService.selectList(vo);
@@ -136,13 +142,9 @@ public class GodCrudCodeGenTest_a1_sql extends GodTestAbstract {
 	}
 
 	private void writeStringToFile(DataModelContext dataModel, String tableSchema, String result) {
-		String pathname = SystemUtils.USER_HOME + SystemUtils.FILE_SEPARATOR + "Desktop" + SystemUtils.FILE_SEPARATOR
-				+ "god.codegen" + SystemUtils.FILE_SEPARATOR + tableSchema + SystemUtils.FILE_SEPARATOR
-				+ dataModel.getEntity().getName() + SystemUtils.FILE_SEPARATOR + dataModel.getEntity().getName()
-				+ "-a1-all.sql";
-		egovLogger.debug("pathname: {}", pathname);
-
-		File file = new File(pathname);
+//		File file = getFile(dataModel, tableSchema);
+		File file = getFile2(dataModel, tableSchema);
+//		String data = EgovDateUtil.toString(new Date(), null, null) + result;
 		String data = result;
 		Charset encoding = StandardCharsets.UTF_8;
 		egovLogger.debug("name: {}", encoding.name());
@@ -154,66 +156,51 @@ public class GodCrudCodeGenTest_a1_sql extends GodTestAbstract {
 		}
 	}
 
-//	public void test2() throws Exception {
-//		crudCodeGen = new CrudCodeGen();
-//
-//		dataModel = new DataModelContext();
-//
-//		dataModel.setPackageName("pkg");
-//		dataModel.setAuthor("홍길동");
-//		dataModel.setTeam("실행환경 개발팀");
-//		dataModel.setCreateDate("2009.02.01");
-//
-//		Entity entity = new Entity("SAMPLE2");
-//
-//		dataModel.setEntity(entity);
-//
-//		List<Attribute> attributes = new ArrayList<Attribute>();
-//		List<Attribute> primaryKeys = new ArrayList<Attribute>();
-//
-//		Attribute attr = new Attribute("ID");
-//		attr.setJavaType("String");
-//		attributes.add(attr);
-//		primaryKeys.add(attr);
-//
-//		attr = new Attribute("NAME");
-//		attr.setJavaType("String");
-//		attributes.add(attr);
-////		primaryKeys.add(attr);
-//
-//		attr = new Attribute("DESCRIPTION");
-//		attr.setJavaType("String");
-//		attributes.add(attr);
-//
-//		attr = new Attribute("USE_YN");
-//		attr.setJavaType("String");
-//		attributes.add(attr);
-//
-//		attr = new Attribute("REG_USER");
-//		attr.setJavaType("String");
-//		attributes.add(attr);
-//
-//		dataModel.setAttributes(attributes);
-//		dataModel.setPrimaryKeys(primaryKeys);
-//
-//		String templateFile = "templates/crud/src/main/resources/pkg/EgovSample_Sample2_SQL.vm";
-//		String result = crudCodeGen.generate(dataModel, templateFile);
-//
-////		egovLogger.debug("result: {}", result);
-//
-//		egovLogger.debug("USER_HOME: {}", SystemUtils.USER_HOME);
-//
-//		String today = EgovDateUtil.toString(new Date(), "yyyy-MM-dd HH-mm-ss", null);
-//
-//		String pathname = SystemUtils.USER_HOME + SystemUtils.FILE_SEPARATOR + "Desktop" + SystemUtils.FILE_SEPARATOR
-//				+ "god.codegen" + SystemUtils.FILE_SEPARATOR + today + SystemUtils.FILE_SEPARATOR
-//				+ "EgovSample_Sample2_SQL.xml";
-//		egovLogger.debug("pathname: {}", pathname);
-//
-//		File file = new File(pathname);
-//		String data = result;
-//		String encoding = "utf-8";
-//		FileUtils.writeStringToFile(file, data, encoding);
-//	}
+	private File getFile(DataModelContext dataModel, String tableSchema) {
+		String pathname = SystemUtils.USER_HOME + SystemUtils.FILE_SEPARATOR + "Desktop" + SystemUtils.FILE_SEPARATOR
+				+ "god.codegen" + SystemUtils.FILE_SEPARATOR + tableSchema + SystemUtils.FILE_SEPARATOR
+				+ dataModel.getEntity().getName() + SystemUtils.FILE_SEPARATOR + dataModel.getEntity().getName()
+				+ "-a1-all.sql";
+
+		egovLogger.debug("pathname: {}", pathname);
+
+		return new File(pathname);
+	}
+
+	private File getFile2(DataModelContext dataModel, String tableSchema) {
+		StringBuffer sb = new StringBuffer();
+
+		sb.append("src");
+		sb.append(SystemUtils.FILE_SEPARATOR);
+
+		sb.append("script");
+		sb.append(SystemUtils.FILE_SEPARATOR);
+
+		sb.append("dml");
+		sb.append(SystemUtils.FILE_SEPARATOR);
+
+//		sb.append("mysql");
+		sb.append(Globals.DB_TYPE);
+		sb.append(SystemUtils.FILE_SEPARATOR);
+
+		sb.append(tableSchema);
+		sb.append(SystemUtils.FILE_SEPARATOR);
+
+		sb.append(dataModel.getEntity().getName());
+		sb.append(SystemUtils.FILE_SEPARATOR);
+
+		sb.append("all.sql");
+
+		String pathname = sb.toString();
+
+		egovLogger.debug("pathname: {}", pathname);
+
+		File file = new File(pathname);
+
+		egovLogger.debug("file: {}", file);
+		egovLogger.debug("getAbsolutePath: {}", file.getAbsolutePath());
+
+		return file;
+	}
 
 }
