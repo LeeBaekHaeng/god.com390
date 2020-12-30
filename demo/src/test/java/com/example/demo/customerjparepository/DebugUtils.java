@@ -26,4 +26,16 @@ public class DebugUtils {
 		}
 	}
 
+	public static void findAll(List<Customer> customers) {
+		log.debug("customers: {}", customers);
+		log.debug("size: {}", customers.size());
+
+		for (Customer customer : customers) {
+			log.debug("customer: {}", customer);
+			log.debug("getId: {}", customer.getId());
+			log.debug("getFirstName: {}", customer.getFirstName());
+			log.debug("getLastName: {}", customer.getLastName());
+		}
+	}
+
 }
