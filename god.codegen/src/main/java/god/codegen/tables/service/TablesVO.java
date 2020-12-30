@@ -5,7 +5,7 @@ import java.util.List;
 @SuppressWarnings("serial")
 public class TablesVO extends Tables {
 
-	public List<String> tableNames;
+	private List<String> tableNames;
 
 	public List<String> getTableNames() {
 		return tableNames;

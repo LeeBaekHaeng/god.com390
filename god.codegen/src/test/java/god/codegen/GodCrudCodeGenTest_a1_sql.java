@@ -58,7 +58,7 @@ public class GodCrudCodeGenTest_a1_sql extends GodTestAbstract {
 
 		tableNames.add("com_t_rdnmadr_zip");
 
-//		tableNames = null;
+		tableNames = null;
 		vo.setTableNames(tableNames);
 
 		List<EgovMap> tables = godTablesService.selectList(vo);
@@ -156,7 +156,7 @@ public class GodCrudCodeGenTest_a1_sql extends GodTestAbstract {
 		}
 	}
 
-	private File getFile(DataModelContext dataModel, String tableSchema) {
+	File getFile(DataModelContext dataModel, String tableSchema) {
 		String pathname = SystemUtils.USER_HOME + SystemUtils.FILE_SEPARATOR + "Desktop" + SystemUtils.FILE_SEPARATOR
 				+ "god.codegen" + SystemUtils.FILE_SEPARATOR + tableSchema + SystemUtils.FILE_SEPARATOR
 				+ dataModel.getEntity().getName() + SystemUtils.FILE_SEPARATOR + dataModel.getEntity().getName()

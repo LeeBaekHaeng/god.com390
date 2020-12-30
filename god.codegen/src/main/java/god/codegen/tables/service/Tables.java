@@ -5,9 +5,9 @@ import egovframework.com.cmm.ComDefaultVO;
 @SuppressWarnings("serial")
 public class Tables extends ComDefaultVO {
 
-	public String tableSchema;
-	public String tableName;
-	public String tableComment;
+	private String tableSchema;
+	private String tableName;
+	private String tableComment;
 
 	public String getTableSchema() {
 		return tableSchema;
