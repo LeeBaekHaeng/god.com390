@@ -1,5 +1,7 @@
 package egovframework.com.cmm.service.impl.egovfilemngserviceimpl;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -41,6 +43,22 @@ public class DebugUtils {
 		egovLogger.debug("getFileExtsn: {}", fileVO.getFileExtsn());
 		egovLogger.debug("getOrignlFileNm: {}", fileVO.getOrignlFileNm());
 		egovLogger.debug("getFileMg: {}", fileVO.getFileMg());
+	}
+
+	public static void debug(List<FileVO> fileVOs) {
+		egovLogger.debug("fileVOs: {}", fileVOs);
+		egovLogger.debug("size: {}", fileVOs.size());
+
+		for (FileVO fileVO : fileVOs) {
+			egovLogger.debug("getAtchFileId: {}", fileVO.getAtchFileId());
+			egovLogger.debug("getFileCn: {}", fileVO.getFileCn());
+			egovLogger.debug("getFileSn: {}", fileVO.getFileSn());
+			egovLogger.debug("getFileStreCours: {}", fileVO.getFileStreCours());
+			egovLogger.debug("getStreFileNm: {}", fileVO.getStreFileNm());
+			egovLogger.debug("getFileExtsn: {}", fileVO.getFileExtsn());
+			egovLogger.debug("getOrignlFileNm: {}", fileVO.getOrignlFileNm());
+			egovLogger.debug("getFileMg: {}", fileVO.getFileMg());
+		}
 	}
 
 }
