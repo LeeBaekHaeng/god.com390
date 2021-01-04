@@ -38,4 +38,11 @@ public class DebugUtils {
 		}
 	}
 
+	public static void debug(Customer customer) {
+		log.debug("customer: {}", customer);
+		log.debug("getId: {}", customer.getId());
+		log.debug("getFirstName: {}", customer.getFirstName());
+		log.debug("getLastName: {}", customer.getLastName());
+	}
+
 }
