@@ -2,6 +2,7 @@ package god.test.a1.service.impl;
 
 import java.util.List;
 
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Repository;
 
 import egovframework.rte.psl.dataaccess.util.EgovMap;
@@ -17,6 +18,7 @@ public class GodTestA1DAO {
 		this.mapper = mapper;
 	}
 
+	@Cacheable(value = "testCache", key = "#vo.tableSchema")
 	public List<EgovMap> selectList(A1VO vo) {
 		return mapper.selectList();
 	}
