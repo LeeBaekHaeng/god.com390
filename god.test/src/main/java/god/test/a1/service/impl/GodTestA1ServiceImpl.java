@@ -1,5 +1,6 @@
 package god.test.a1.service.impl;
 
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
@@ -32,6 +33,24 @@ public class GodTestA1ServiceImpl extends EgovAbstractServiceImpl implements God
 		} catch (FdlException e) {
 			egovLogger.error(e.getMessage());
 		}
+	}
+
+	@Override
+	public void selectList2(A1VO vo, Model model) {
+		if (vo.getTableSchema() == null) {
+			vo.setTableSchema("com");
+		}
+		model.addAttribute("tables", dao.selectList2(vo));
+		try {
+			model.addAttribute("mailMsgId", egovMailMsgIdGnrService.getNextStringId());
+		} catch (FdlException e) {
+			egovLogger.error(e.getMessage());
+		}
+	}
+
+	@Override
+	@CacheEvict(value = "testCache", allEntries = true)
+	public void deleteCacheEvict(A1VO vo, Model model) {
 	}
 
 }

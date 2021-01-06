@@ -23,4 +23,9 @@ public class GodTestA1DAO {
 		return mapper.selectList();
 	}
 
+	@Cacheable(value = "menuCache", key = "#vo.tableSchema")
+	public List<EgovMap> selectList2(A1VO vo) {
+		return mapper.selectList();
+	}
+
 }

@@ -6,4 +6,8 @@ public interface GodTestA1Service {
 
 	void selectList(A1VO vo, Model model);
 
+	void selectList2(A1VO vo, Model model);
+
+	void deleteCacheEvict(A1VO vo, Model model);
+
 }

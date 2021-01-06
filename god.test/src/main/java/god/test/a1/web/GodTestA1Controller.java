@@ -22,4 +22,16 @@ public class GodTestA1Controller {
 		return "god/test/a1/selectList";
 	}
 
+	@RequestMapping("/a1/selectList2.do")
+	public String selectList2(A1VO vo, Model model) {
+		service.selectList2(vo, model);
+		return "god/test/a1/selectList";
+	}
+
+	@RequestMapping("/a1/deleteCacheEvict.do")
+	public String deleteCacheEvict(A1VO vo, Model model) {
+		service.deleteCacheEvict(vo, model);
+		return "god/test/a1/selectList";
+	}
+
 }
