@@ -23,6 +23,9 @@ public class GodTestA1ServiceImpl extends EgovAbstractServiceImpl implements God
 
 	@Override
 	public void selectList(A1VO vo, Model model) {
+		if (vo.getTableSchema() == null) {
+			vo.setTableSchema("com");
+		}
 		model.addAttribute("tables", dao.selectList(vo));
 		try {
 			model.addAttribute("mailMsgId", egovMailMsgIdGnrService.getNextStringId());
