@@ -13,7 +13,8 @@ public class A54_getMethods {
 
 	@Test
 	public void test() throws Exception {
-		String className = Class.class.getName();
+//		String className = Class.class.getName();
+		String className = egovframework.com.cmm.service.EgovCmmUseService.class.getName();
 		egovLogger.debug("getName: {}", className);
 
 		Class<?> c = Class.forName(className);
@@ -22,9 +23,9 @@ public class A54_getMethods {
 		StringBuffer sb = new StringBuffer(SystemUtils.LINE_SEPARATOR);
 
 		for (int i = 0; i < m.length; i++) {
-			if (m[i].getName().indexOf("Methods") == -1) {
-				continue;
-			}
+//			if (m[i].getName().indexOf("Methods") == -1) {
+//				continue;
+//			}
 
 			egovLogger.debug("method: {}", m[i].toString());
 			egovLogger.debug("getName: {}", m[i].getName());
