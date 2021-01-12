@@ -21,6 +21,7 @@
 		width="222" />
 	</a>
 	<p id="token-result"></p>
+	<p id="user-result"></p>
 	<script type="text/javascript">
   function loginWithKakao() {
     Kakao.Auth.authorize({
@@ -37,6 +38,16 @@
       Kakao.Auth.getStatusInfo(({ status }) => {
         if(status === 'connected') {
           document.getElementById('token-result').innerText = 'login success. token: ' + Kakao.Auth.getAccessToken()
+          Kakao.Auth.getStatusInfo(function(res) {
+            console.log('res', res);
+            console.log('user', res.user);
+            console.log('id', res.user.id);
+            console.log('kakao_account', res.user.kakao_account);
+            console.log('profile', res.user.kakao_account.profile);
+            console.log('nickname', res.user.kakao_account.profile.nickname);
+            console.log('iconnected_at', res.user.connected_at);
+            document.getElementById('user-result').innerText = '회원번호: '+res.user.id + ', 서비스에 연결 완료된 시각, UTC: ' + res.user.connected_at + ', 닉네임: ' + res.user.kakao_account.profile.nickname;
+          });
         } else {
           Kakao.Auth.setAccessToken(null)
         }
