@@ -7,8 +7,6 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import egovframework.com.cmm.service.impl.EgovCmmUseServiceImpl;
-
 public class ReflectTest {
 
 // https://github.com/wmacevoy/kiss/blob/master/src/main/java/kiss/util/Reflect.java
@@ -18,7 +16,8 @@ public class ReflectTest {
 	@Test
 	public void test() {
 //		Class<?> clazz = egovframework.com.cmm.service.EgovCmmUseService.class;
-		Class<EgovCmmUseServiceImpl> clazz = egovframework.com.cmm.service.impl.EgovCmmUseServiceImpl.class;
+//		Class<EgovCmmUseServiceImpl> clazz = egovframework.com.cmm.service.impl.EgovCmmUseServiceImpl.class;
+		Class<ClassLoader> clazz = java.lang.ClassLoader.class;
 		egovLogger.debug("clazz: {}", clazz);
 
 		Method m[] = Reflect.getDeclaredMethodsInOrder(clazz);
@@ -30,7 +29,7 @@ public class ReflectTest {
 			egovLogger.debug("getName: {}", m[i].getName());
 
 			sb.append("A");
-			sb.append(i + 1);
+			sb.append(String.format("%0" + String.valueOf(m.length).length() + "d", i + 1));
 			sb.append("_");
 			sb.append(m[i].getName());
 			sb.append(SystemUtils.LINE_SEPARATOR);
