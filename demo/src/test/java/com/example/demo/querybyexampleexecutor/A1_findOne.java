@@ -14,14 +14,14 @@ import com.example.demo.CustomerJpaRepository;
 import com.example.demo.customerjparepository.DebugUtils;
 
 @SpringBootTest
-class A1_findAll {
+class A1_findOne {
 
-	private static final Logger log = LoggerFactory.getLogger(A1_findAll.class);
+	private static final Logger log = LoggerFactory.getLogger(A1_findOne.class);
 
 	private final CustomerJpaRepository repository;
 
 	@Autowired
-	public A1_findAll(CustomerJpaRepository repository) {
+	public A1_findOne(CustomerJpaRepository repository) {
 		this.repository = repository;
 	}
 
