@@ -18,7 +18,8 @@ public class ReflectTest {
 //		Class<?> clazz = egovframework.com.cmm.service.EgovCmmUseService.class;
 //		Class<EgovCmmUseServiceImpl> clazz = egovframework.com.cmm.service.impl.EgovCmmUseServiceImpl.class;
 //		Class<ClassLoader> clazz = java.lang.ClassLoader.class;
-		Class<?> clazz = egovframework.com.cop.ems.service.impl.SndngMailDetailDAO.class;
+//		Class<?> clazz = egovframework.com.cop.ems.service.impl.SndngMailDetailDAO.class;
+		Class<?> clazz = java.lang.Class.class;
 		egovLogger.debug("clazz: {}", clazz);
 
 		Method m[] = Reflect.getDeclaredMethodsInOrder(clazz);

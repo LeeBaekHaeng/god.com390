@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 
 public class A61_getDeclaredMethods {
 
-	protected static Logger egovLogger = LoggerFactory.getLogger(A61_getDeclaredMethods.class);
+	protected Logger egovLogger = LoggerFactory.getLogger(A61_getDeclaredMethods.class);
 
 	@Test
 	public void test() throws Exception {
