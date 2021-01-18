@@ -1,0 +1,19 @@
+전자정부 표준프레임워크 개발환경 3.9.0 설치
+
+C:\EGOVFRAME390\eGovCI-3.9.0_64bit\bin\apache-maven-3.6.3\conf
+settings.xml
+<localRepository>/EGOVFRAME390/.m2/repository</localRepository>
+
+C:\EGOVFRAME390\eGovFrameDev-3.9.0-64bit\eclipse
+eclipse.ini
+-vm
+/EGOVFRAME390/eGovCI-3.9.0_64bit/bin/jdk8u242-b08/jre/bin/server/jvm.dll
+-Dosgi.instance.area.default=/EGOVFRAME390/eGovFrameDev-3.9.0-64bit/workspace
+-Xms2048m
+-Xmx2048m
+
+C:\EGOVFRAME390\eGovFrameDev-3.9.0-64bit\eclipse
+eclipse.exe
+eGovFrameDev-3.9.0-64bit
+
+dependency:go-offline
