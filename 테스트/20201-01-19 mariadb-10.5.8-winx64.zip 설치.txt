@@ -1,0 +1,27 @@
+20201-01-19 mariadb-10.5.8-winx64.zip 설치
+
+EGOVFRAME390
+
+EGOVFRAME390_DOWNLOADS
+
+C:\EGOVFRAME390\mariadb-10.5.8-winx64\bin
+mysql_install_db.exe
+
+C:\EGOVFRAME390\mariadb-10.5.8-winx64\data
+my.ini
+port=3306
+character-set-server=utf8
+
+C:\EGOVFRAME390\mariadb-10.5.8-winx64\bin
+mysqld.exe
+
+C:\EGOVFRAME390\dbeaver-ce-7.3.3-win32.win32.x86_64\dbeaver
+dbeaver.ini
+
+CREATE USER 'com'@'%';
+ALTER USER 'com'@'%'
+IDENTIFIED BY 'com01' ;
+GRANT Delete ON com.* TO 'com'@'%';
+GRANT Insert ON com.* TO 'com'@'%';
+GRANT Select ON com.* TO 'com'@'%';
+GRANT Update ON com.* TO 'com'@'%';
