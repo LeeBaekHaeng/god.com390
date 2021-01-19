@@ -1,0 +1,8 @@
+QueryByExampleExecutor findAll(Example<S> example, Pageable pageable) 테스트
+
+A1_findOne
+A2_findAll
+A3_findAll
+*A4_findAll
+A5_count
+A6_exists
