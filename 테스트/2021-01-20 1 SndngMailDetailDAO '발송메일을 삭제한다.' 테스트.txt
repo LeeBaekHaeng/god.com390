@@ -1,0 +1,21 @@
+SndngMailDetailDAO '발송메일을 삭제한다.' 테스트
+
+CmmUseDAO.java
+EgovComAbstractDAO.java
+FileManageDAO.java
+
+*SndngMailDetailDAO.java
+GOD_A1_selectSndngMail
+GOD_A2_selectAtchmnFileList
+
+*GOD_A3_deleteSndngMail
+insertSndngMail
+
+GOD_A4_deleteAtchmnFileList
+
+SndngMailDtlsDAO.java
+SndngMailRegistDAO.java
+AuthorManageDAO.java
+AuthorRoleManageDAO.java
+LoginPolicyDAO.java
+LoginDAO.java
