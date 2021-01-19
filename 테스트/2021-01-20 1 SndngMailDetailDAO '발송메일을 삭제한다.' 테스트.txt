@@ -4,16 +4,21 @@ CmmUseDAO.java
 EgovComAbstractDAO.java
 FileManageDAO.java
 
-*SndngMailDetailDAO.java
+SndngMailDetailDAO.java
 GOD_A1_selectSndngMail
 GOD_A2_selectAtchmnFileList
 
-*GOD_A3_deleteSndngMail
+GOD_A3_deleteSndngMail
 insertSndngMail
 
 GOD_A4_deleteAtchmnFileList
 
 SndngMailDtlsDAO.java
+*GOD_A1_selectSndngMailList
+sndngmaildtlsdao
+
+GOD_A2_selectSndngMailListTotCnt
+
 SndngMailRegistDAO.java
 AuthorManageDAO.java
 AuthorRoleManageDAO.java

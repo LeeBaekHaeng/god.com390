@@ -7,6 +7,8 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import egovframework.com.cop.ems.service.impl.SndngMailDtlsDAO;
+
 public class ReflectTest {
 
 // https://github.com/wmacevoy/kiss/blob/master/src/main/java/kiss/util/Reflect.java
@@ -19,7 +21,8 @@ public class ReflectTest {
 //		Class<EgovCmmUseServiceImpl> clazz = egovframework.com.cmm.service.impl.EgovCmmUseServiceImpl.class;
 //		Class<ClassLoader> clazz = java.lang.ClassLoader.class;
 //		Class<?> clazz = egovframework.com.cop.ems.service.impl.SndngMailDetailDAO.class;
-		Class<?> clazz = java.lang.Class.class;
+//		Class<?> clazz = java.lang.Class.class;
+		Class<?> clazz = SndngMailDtlsDAO.class;
 		egovLogger.debug("clazz: {}", clazz);
 
 		Method m[] = Reflect.getDeclaredMethodsInOrder(clazz);
