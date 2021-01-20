@@ -14,10 +14,11 @@ insertSndngMail
 GOD_A4_deleteAtchmnFileList
 
 SndngMailDtlsDAO.java
-*GOD_A1_selectSndngMailList
+GOD_A1_selectSndngMailList
 sndngmaildtlsdao
 
-GOD_A2_selectSndngMailListTotCnt
+SndngMailDetailDAO '발송메일 총건수를 조회한다.' 테스트
+*GOD_A2_selectSndngMailListTotCnt
 
 SndngMailRegistDAO.java
 AuthorManageDAO.java
