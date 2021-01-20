@@ -5,7 +5,8 @@ A2_findAll
 A3_findAll
 A4_findAll
 
-*A5_count
+A5_count
 QueryByExampleExecutor count(Example<S> example) 테스트
 
-A6_exists
+*A6_exists
+QueryByExampleExecutor exists(Example<S> example) 테스트
