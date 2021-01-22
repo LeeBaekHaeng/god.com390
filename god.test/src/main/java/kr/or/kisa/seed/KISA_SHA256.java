@@ -1,6 +1,8 @@
+package kr.or.kisa.seed;
+
 /**
 @file KISA_SHA256.java
-@brief SHA256 ¾ÏÈ£ ¾Ë°í¸®Áò
+@brief SHA256 ì•”í˜¸ ì•Œê³ ë¦¬ì¦˜
 @author Copyright (c) 2013 by KISA
 @remarks http://seed.kisa.or.kr/
 */
@@ -78,11 +80,11 @@ public class KISA_SHA256 {
 	}
 	
 	//*********************************************************************************************************************************
-	// o SHA256_Transform() : 512 ºñÆ® ´ÜÀ§ ºí·ÏÀÇ ¸Ş½ÃÁö¸¦ ÀÔ·Â ¹Ş¾Æ ¿¬¼âº¯¼ö¸¦ °»½ÅÇÏ´Â ¾ĞÃà ÇÔ¼ö·Î½á
-	//	                      4 ¶ó¿îµå(64 ´Ü°è)·Î ±¸¼ºµÇ¸ç 8°³ÀÇ ¿¬¼âº¯¼ö(a, b, c, d, e, f, g, h)¸¦ »ç¿ë
-	// o ÀÔ·Â                               : Message               - ÀÔ·Â ¸Ş½ÃÁöÀÇ Æ÷ÀÎÅÍ º¯¼ö
-	//	                      ChainVar              - ¿¬¼âº¯¼öÀÇ Æ÷ÀÎÅÍ º¯¼ö
-	// o Ãâ·Â                               :
+	// o SHA256_Transform() : 512 ë¹„íŠ¸ ë‹¨ìœ„ ë¸”ë¡ì˜ ë©”ì‹œì§€ë¥¼ ì…ë ¥ ë°›ì•„ ì—°ì‡„ë³€ìˆ˜ë¥¼ ê°±ì‹ í•˜ëŠ” ì••ì¶• í•¨ìˆ˜ë¡œì¨
+	//	                      4 ë¼ìš´ë“œ(64 ë‹¨ê³„)ë¡œ êµ¬ì„±ë˜ë©° 8ê°œì˜ ì—°ì‡„ë³€ìˆ˜(a, b, c, d, e, f, g, h)ë¥¼ ì‚¬ìš©
+	// o ì…ë ¥                               : Message               - ì…ë ¥ ë©”ì‹œì§€ì˜ í¬ì¸í„° ë³€ìˆ˜
+	//	                      ChainVar              - ì—°ì‡„ë³€ìˆ˜ì˜ í¬ì¸í„° ë³€ìˆ˜
+	// o ì¶œë ¥                               :
 	//*********************************************************************************************************************************
 	private static void SHA256_Transform(byte[] Message, int[] ChainVar) {
 		int abcdefgh[] = new int[8];
@@ -128,8 +130,8 @@ public class KISA_SHA256 {
 	}
 
 	/**
-	@brief ¿¬¼âº¯¼ö¿Í ±æÀÌº¯¼ö¸¦ ÃÊ±âÈ­ÇÏ´Â ÇÔ¼ö
-	@param Info : SHA256_Process È£Ãâ ½Ã »ç¿ëµÇ´Â ±¸Á¶Ã¼
+	@brief ì—°ì‡„ë³€ìˆ˜ì™€ ê¸¸ì´ë³€ìˆ˜ë¥¼ ì´ˆê¸°í™”í•˜ëŠ” í•¨ìˆ˜
+	@param Info : SHA256_Process í˜¸ì¶œ ì‹œ ì‚¬ìš©ë˜ëŠ” êµ¬ì¡°ì²´
 	*/
 	public static void SHA256_Init( SHA256_INFO Info ) {
 		Info.uChainVar[0] = 0x6a09e667;
@@ -145,10 +147,10 @@ public class KISA_SHA256 {
 	}
 
 	/**
-	@brief ¿¬¼âº¯¼ö¿Í ±æÀÌº¯¼ö¸¦ ÃÊ±âÈ­ÇÏ´Â ÇÔ¼ö
-	@param Info : SHA256_Init È£ÃâÇÏ¿© ÃÊ±âÈ­µÈ ±¸Á¶Ã¼(³»ºÎÀûÀ¸·Î »ç¿ëµÈ´Ù.)
-	@param pszMessage : »ç¿ëÀÚ ÀÔ·Â Æò¹®
-	@param inLen : »ç¿ëÀÚ ÀÔ·Â Æò¹® ±æÀÌ
+	@brief ì—°ì‡„ë³€ìˆ˜ì™€ ê¸¸ì´ë³€ìˆ˜ë¥¼ ì´ˆê¸°í™”í•˜ëŠ” í•¨ìˆ˜
+	@param Info : SHA256_Init í˜¸ì¶œí•˜ì—¬ ì´ˆê¸°í™”ëœ êµ¬ì¡°ì²´(ë‚´ë¶€ì ìœ¼ë¡œ ì‚¬ìš©ëœë‹¤.)
+	@param pszMessage : ì‚¬ìš©ì ì…ë ¥ í‰ë¬¸
+	@param inLen : ì‚¬ìš©ì ì…ë ¥ í‰ë¬¸ ê¸¸ì´
 	*/
 	public static void SHA256_Process( SHA256_INFO Info, byte[] pszMessage, int uDataLen ) {
 		int pszMessage_offset;
@@ -171,9 +173,9 @@ public class KISA_SHA256 {
 	}
 
 	/**
-	@brief ¸Ş½ÃÁö µ¡ºÙÀÌ±â¿Í ±æÀÌ µ¡ºÙÀÌ±â¸¦ ¼öÇàÇÑ ÈÄ ¸¶Áö¸· ¸Ş½ÃÁö ºí·ÏÀ» °¡Áö°í ¾ĞÃàÇÔ¼ö¸¦ È£ÃâÇÏ´Â ÇÔ¼ö
-	@param Info : SHA256_Init È£ÃâÇÏ¿© ÃÊ±âÈ­µÈ ±¸Á¶Ã¼(³»ºÎÀûÀ¸·Î »ç¿ëµÈ´Ù.)
-	@param pszDigest : ¾ÏÈ£¹®
+	@brief ë©”ì‹œì§€ ë§ë¶™ì´ê¸°ì™€ ê¸¸ì´ ë§ë¶™ì´ê¸°ë¥¼ ìˆ˜í–‰í•œ í›„ ë§ˆì§€ë§‰ ë©”ì‹œì§€ ë¸”ë¡ì„ ê°€ì§€ê³  ì••ì¶•í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ëŠ” í•¨ìˆ˜
+	@param Info : SHA256_Init í˜¸ì¶œí•˜ì—¬ ì´ˆê¸°í™”ëœ êµ¬ì¡°ì²´(ë‚´ë¶€ì ìœ¼ë¡œ ì‚¬ìš©ëœë‹¤.)
+	@param pszDigest : ì•”í˜¸ë¬¸
 	*/
 	public static void SHA256_Close( SHA256_INFO Info, byte[] pszDigest ) {
 		int i, Index;
@@ -205,10 +207,10 @@ public class KISA_SHA256 {
 	}
 
 	/**
-	@brief »ç¿ëÀÚ ÀÔ·Â Æò¹®À» ÇÑ¹ø¿¡ Ã³¸®
-	@param pszMessage : »ç¿ëÀÚ ÀÔ·Â Æò¹®
-	@param pszDigest : ¾ÏÈ£¹®
-	@remarks ³»ºÎÀûÀ¸·Î SHA256_Init, SHA256_Process, SHA256_Close¸¦ È£ÃâÇÑ´Ù.
+	@brief ì‚¬ìš©ì ì…ë ¥ í‰ë¬¸ì„ í•œë²ˆì— ì²˜ë¦¬
+	@param pszMessage : ì‚¬ìš©ì ì…ë ¥ í‰ë¬¸
+	@param pszDigest : ì•”í˜¸ë¬¸
+	@remarks ë‚´ë¶€ì ìœ¼ë¡œ SHA256_Init, SHA256_Process, SHA256_Closeë¥¼ í˜¸ì¶œí•œë‹¤.
 	*/
 	public static void SHA256_Encrpyt( byte[] pszMessage, int uPlainTextLen, byte[] pszDigest ) {
 		SHA256_INFO info = new SHA256_INFO();

@@ -1,6 +1,8 @@
+package kr.or.kisa.seed;
+
 /**
 @file KISA_SEED_CBC.java
-@brief SEED CBC ��ȣ �˰���
+@brief SEED CBC 암호 알고리즘
 @author Copyright (c) 2013 by KISA
 @remarks http://seed.kisa.or.kr/
 */
@@ -390,7 +392,7 @@ public class KISA_SEED_CBC {
 
 
 	public static int SEED_CBC_init( KISA_SEED_INFO pInfo, KISA_ENC_DEC enc, byte[] pbszUserKey, byte[] pbszIV ) {
-		int ABCD[] = new int[4];			// Iuput/output values at each rounds(�� ���� ��/���)
+		int ABCD[] = new int[4];			// Iuput/output values at each rounds(각 라운드 입/출력)
 		int T[] = new int[2];				// Temporary variable
 		int K[];
 
@@ -904,7 +906,7 @@ public class KISA_SEED_CBC {
 		}
 		
 		//Padding : PKSC #7
-		//��� : PADDING �� ����(����Ʈ����)
+		//출력 : PADDING 후 길이(바이트단위)
 		public static int Padding(byte[] pbData, byte[] padData, int length) {
 			int i;
 			int padvalue = 16 - (length%16);
@@ -918,7 +920,7 @@ public class KISA_SEED_CBC {
 		}
 		
 		
-		//1��(128��Ʈ XOR)
+		//1블럭(128비트 XOR)
 		public static void BLOCK_XOR_PROPOSAL(int[] OUT_VALUE, int out_value_offset, int[] IN_VALUE1, int in_value1_offset, int[] IN_VALUE2, int in_value2_offset) {
 			OUT_VALUE[out_value_offset+0] = (in_value1_offset<IN_VALUE1.length?IN_VALUE1[in_value1_offset+0]:0) ^ (in_value2_offset<IN_VALUE2.length?IN_VALUE2[in_value2_offset+0]:0);
 			OUT_VALUE[out_value_offset+1] = (in_value1_offset+1<IN_VALUE1.length?IN_VALUE1[in_value1_offset+1]:0) ^ (in_value2_offset+1<IN_VALUE2.length?IN_VALUE2[in_value2_offset+1]:0);
@@ -932,7 +934,7 @@ public class KISA_SEED_CBC {
 	
 
 	public static int SeedRoundKey( KISA_SEED_INFO pInfo, KISA_ENC_DEC enc, byte[] pbszUserKey, byte[] pbszIV ) {
-		int ABCD[] = new int[4];			// Iuput/output values at each rounds(�� ���� ��/���)
+		int ABCD[] = new int[4];			// Iuput/output values at each rounds(각 라운드 입/출력)
 		int T[] = new int[2];				// Temporary variable
 		int K[];
 
@@ -1035,7 +1037,7 @@ public class KISA_SEED_CBC {
 		
 		
 		
-		System.out.print("[ Test Encrypt mode : ��� 1 ]"+"\n");
+		System.out.print("[ Test Encrypt mode : 방법 1 ]"+"\n");
 		System.out.print("Key\t\t\t\t: ");
 	    for (int i=0; i<16; i++)	System.out.print(Integer.toHexString(0xff&pbUserKey[i])+" ");
 	    System.out.print("\n");
@@ -1147,13 +1149,13 @@ public class KISA_SEED_CBC {
 	    /*****************************************************************
 	    /*****************************************************************
 	    /*****************************************************************
-	     * ���2
+	     * 방법2
 	     ******************************************************************/
 	        
 	    
 	    PLAINTEXT_LENGTH = 14;
 	    
-		System.out.print("\n\n[ Test Encrypt mode : ��� 2 ]"+"\n");
+		System.out.print("\n\n[ Test Encrypt mode : 방법 2 ]"+"\n");
 		System.out.print("Key\t\t\t\t: ");
 	    for (int i=0; i<16; i++)	System.out.print(Integer.toHexString(0xff&pbUserKey[i])+", ");
 	    System.out.print("\n");
@@ -1166,10 +1168,10 @@ public class KISA_SEED_CBC {
 	    
 	    
 	    /************************************************************************************************
-	     * ù��°
+	     * 첫번째
 	     */
 	    
-	    // ��ȣȭ
+	    // 암호화
 	    
 	    KISA_SEED_INFO info = new KISA_SEED_INFO();
 		int[] data;
@@ -1190,7 +1192,7 @@ public class KISA_SEED_CBC {
 
 		SEED_CBC_init( info, KISA_ENC_DEC.KISA_ENCRYPT, pbUserKey, bszIV );
 		
-		int process_blockLeng = BLOCK_SIZE_SEED * 2;								//�ѹ��� ó���� BLOCK
+		int process_blockLeng = BLOCK_SIZE_SEED * 2;								//한번에 처리할 BLOCK
 		
 		int[] outbuf = new int[process_blockLeng/4];
 		
@@ -1248,7 +1250,7 @@ public class KISA_SEED_CBC {
 	    
 	    
 	    
-	    // ��ȣȭ
+	    // 복호화
 	    
 	    info = new KISA_SEED_INFO();
 	    CIPHERTEXT_LENGTH = 16;
@@ -1356,7 +1358,7 @@ public class KISA_SEED_CBC {
 	    
 	    
 	    /*******************************************************************************************************
-	     * �ι�° t.v
+	     * 두번째 t.v
 	     */    
 		
 		info = new KISA_SEED_INFO();
@@ -1375,7 +1377,7 @@ public class KISA_SEED_CBC {
 
 		SEED_CBC_init( info, KISA_ENC_DEC.KISA_ENCRYPT, pbUserKey, bszIV );
 		
-		process_blockLeng = BLOCK_SIZE_SEED * 2;								//�ѹ��� ó���� BLOCK
+		process_blockLeng = BLOCK_SIZE_SEED * 2;								//한번에 처리할 BLOCK
 		
 
 		outbuf = new int[process_blockLeng/4];
@@ -1436,10 +1438,10 @@ public class KISA_SEED_CBC {
 		
 		
 		/**
-		 * ��ȣȭ
+		 * 복호화
 		 */
 		
-	    // ��ȣȭ
+	    // 복호화
 	    
 	    info = new KISA_SEED_INFO();
 	    CIPHERTEXT_LENGTH = 16;
@@ -1535,7 +1537,7 @@ public class KISA_SEED_CBC {
 		
 		
 	    /*******************************************************************************************************
-	     * ����° t.v
+	     * 세번째 t.v
 	     */    
 	    
 	    PLAINTEXT_LENGTH = 16;
@@ -1551,7 +1553,7 @@ public class KISA_SEED_CBC {
 
 		SEED_CBC_init( info, KISA_ENC_DEC.KISA_ENCRYPT, pbUserKey, bszIV );
 		
-		process_blockLeng = BLOCK_SIZE_SEED * 2;								//�ѹ��� ó���� BLOCK
+		process_blockLeng = BLOCK_SIZE_SEED * 2;								//한번에 처리할 BLOCK
 		
 
 		outbuf = new int[process_blockLeng/4];
@@ -1612,10 +1614,10 @@ public class KISA_SEED_CBC {
 		
 		
 		/**
-		 * ��ȣȭ
+		 * 복호화
 		 */
 		
-	    // ��ȣȭ
+	    // 복호화
 	    
 	    info = new KISA_SEED_INFO();
 	    CIPHERTEXT_LENGTH = 32;
@@ -1712,7 +1714,7 @@ public class KISA_SEED_CBC {
 		
 		
 	    /*******************************************************************************************************
-	     * �׹�° t.v
+	     * 네번째 t.v
 	     */    
 	    
 	    PLAINTEXT_LENGTH = 18;
@@ -1728,7 +1730,7 @@ public class KISA_SEED_CBC {
 
 		SEED_CBC_init( info, KISA_ENC_DEC.KISA_ENCRYPT, pbUserKey, bszIV );
 		
-		process_blockLeng = BLOCK_SIZE_SEED * 2;								//�ѹ��� ó���� BLOCK
+		process_blockLeng = BLOCK_SIZE_SEED * 2;								//한번에 처리할 BLOCK
 		
 
 		outbuf = new int[process_blockLeng/4];
@@ -1789,10 +1791,10 @@ public class KISA_SEED_CBC {
 		
 		
 		/**
-		 * ��ȣȭ
+		 * 복호화
 		 */
 		
-	    // ��ȣȭ
+	    // 복호화
 	    
 	    info = new KISA_SEED_INFO();
 	    CIPHERTEXT_LENGTH = 32;

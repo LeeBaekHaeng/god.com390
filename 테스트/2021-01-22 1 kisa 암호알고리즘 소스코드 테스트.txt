@@ -8,7 +8,7 @@ seed.kisa.or.kr
 
 kr.or.kisa.seed
 
-http://localhost:8080/test/test/kisa/cbc/index.jsp
+http://localhost:8080/test/test/kisa/seed/cbc/index.jsp
 
 KISA_SEED_ECB_CBC_CTR_CCM_GCM_CMAC
 KISA_SHA256
