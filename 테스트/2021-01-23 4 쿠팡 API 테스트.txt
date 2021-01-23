@@ -23,3 +23,11 @@ https://start.spring.io/
 com.god
 product-api
 Product API project for Spring Boot
+
+http://localhost:8080/v1/products
+{
+    "displayProductName":"displayProductName",
+    "salePrice":10000
+}
+
+http://localhost:8080/v1/products/1
