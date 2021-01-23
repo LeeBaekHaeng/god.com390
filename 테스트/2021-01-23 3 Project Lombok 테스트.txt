@@ -1,0 +1,9 @@
+Project Lombok 테스트
+
+https://projectlombok.org/
+
+E:\EGOVFRAME390\eGovFrameDev-3.9.0-64bit\eclipse
+lombok-1.18.16.jar
+
+eclipse.ini
+-javaagent:lombok-1.18.16.jar
