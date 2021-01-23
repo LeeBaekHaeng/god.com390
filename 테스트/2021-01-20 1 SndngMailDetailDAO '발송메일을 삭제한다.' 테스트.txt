@@ -18,9 +18,15 @@ GOD_A1_selectSndngMailList
 sndngmaildtlsdao
 
 SndngMailDetailDAO '발송메일 총건수를 조회한다.' 테스트
-*GOD_A2_selectSndngMailListTotCnt
+GOD_A2_selectSndngMailListTotCnt
 
-SndngMailRegistDAO.java
+SndngMailRegistDAO '발송할 메일을 등록한다' 테스트
+*SndngMailRegistDAO.java
+sndngmailregistdao
+*God_A1_insertSndngMail
+God_A2_selectAtchmnFileList
+God_A3_updateSndngMail
+
 AuthorManageDAO.java
 AuthorRoleManageDAO.java
 LoginPolicyDAO.java
