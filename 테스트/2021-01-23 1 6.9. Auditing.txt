@@ -1,0 +1,14 @@
+Auditing 테스트
+
+6.9. Auditing
+
+https://docs.spring.io/spring-data/jpa/docs/2.4.3/reference/html/#auditing
+
+CustomerRepository_auditing
+
+@CreatedDate
+
+@Entity
+@EntityListeners(AuditingEntityListener.class)
+
+@EnableJpaAuditing

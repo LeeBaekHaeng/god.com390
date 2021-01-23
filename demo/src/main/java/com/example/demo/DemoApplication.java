@@ -6,8 +6,11 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.data.domain.AuditorAware;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @SpringBootApplication
+@EnableJpaAuditing
 public class DemoApplication {
 
 	private static final Logger log = LoggerFactory.getLogger(DemoApplication.class);
@@ -53,6 +56,11 @@ public class DemoApplication {
 			// }
 			log.info("");
 		};
+	}
+
+	@Bean
+	public AuditorAware<String> auditorProvider() {
+		return new SpringSecurityAuditorAware();
 	}
 
 }
