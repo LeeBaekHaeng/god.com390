@@ -31,3 +31,5 @@ http://localhost:8080/v1/products
 }
 
 http://localhost:8080/v1/products/1
+
+-Dspring.profiles.active=mysql
