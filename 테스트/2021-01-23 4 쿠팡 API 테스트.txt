@@ -1,0 +1,25 @@
+쿠팡 API 테스트
+
+https://developers.coupangcorp.com/hc/ko
+
+상품 API
+
+https://developers.coupangcorp.com/hc/ko/sections/360005046534
+
+상품 조회
+
+product
+
+displayProductName
+노출상품명
+
+salePrice
+판매가격
+
+product-api
+
+https://start.spring.io/
+
+com.god
+product-api
+Product API project for Spring Boot
