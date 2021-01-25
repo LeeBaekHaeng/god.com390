@@ -1,0 +1,18 @@
+공통컴포넌트 3.9.0 Spring Data JPA 2.4.3
+
+https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:com:v3.9:init_guide
+
+---
+
+일반로그인
+*일반회원	COMTNGNRLMBER
+COM_TN_GNRL_MBER
+ComTnGnrlMber
+entity
+repository
+ComTnGnrlMberRepository
+
+기업회원	COMTNENTRPRSMBER
+업무사용자	COMTNEMPLYRINFO
+
+---
