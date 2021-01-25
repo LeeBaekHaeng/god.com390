@@ -26,11 +26,12 @@ sndngmailregistdao
 God_A1_insertSndngMail
 
 SndngMailRegistDAO '발송할 메일에 있는 첨부파일 목록을 조회한다.' 테스트
-*God_A2_selectAtchmnFileList
+God_A2_selectAtchmnFileList
 테이블 없음
 데이터 없음
 
-God_A3_updateSndngMail
+SndngMailRegistDAO '발송결과를 수정한다.' 테스트
+*God_A3_updateSndngMail
 
 AuthorManageDAO.java
 AuthorRoleManageDAO.java
