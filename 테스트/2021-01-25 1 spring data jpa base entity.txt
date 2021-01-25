@@ -1,0 +1,7 @@
+spring data jpa base entity
+
+https://ict-nroo.tistory.com/129
+
+@MappedSuperclass
+
+BaseEntity
