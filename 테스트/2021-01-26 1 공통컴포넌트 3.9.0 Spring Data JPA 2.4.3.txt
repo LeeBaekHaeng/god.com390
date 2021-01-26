@@ -5,7 +5,7 @@ https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:com:v3.9:init_guide
 ---
 
 일반로그인
-*일반회원	COMTNGNRLMBER
+일반회원	COMTNGNRLMBER
 COM_TN_GNRL_MBER
 ComTnGnrlMber
 entity
@@ -13,6 +13,7 @@ repository
 ComTnGnrlMberRepository
 comtngnrlmberrepository
 일반회원 비밀번호정답
+* 일반회원 상세주소
 
 기업회원	COMTNENTRPRSMBER
 업무사용자	COMTNEMPLYRINFO

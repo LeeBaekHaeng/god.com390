@@ -28,4 +28,25 @@ public class ComTnGnrlMber {
 	@Column(length = 100)
 	private String passwordCnsr;
 
+	@Column(length = 200)
+	private String ihidnum;
+
+	@Column(nullable = false, length = 50)
+	private String mberNm;
+
+	@Column(nullable = false, length = 6)
+	private String zip;
+
+	@Column(nullable = false, length = 100)
+	private String adres;
+
+	@Column(nullable = false, length = 4)
+	private String areaNo;
+
+	@Column(length = 15)
+	private String mberSttus;
+
+	@Column(length = 100)
+	private String detailAdres;
+
 }
