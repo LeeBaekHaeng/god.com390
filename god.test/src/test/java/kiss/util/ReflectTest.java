@@ -7,7 +7,7 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import egovframework.com.cop.ems.service.impl.SndngMailRegistDAO;
+import egovframework.com.sec.ram.service.impl.AuthorManageDAO;
 
 public class ReflectTest {
 
@@ -23,7 +23,8 @@ public class ReflectTest {
 //		Class<?> clazz = egovframework.com.cop.ems.service.impl.SndngMailDetailDAO.class;
 //		Class<?> clazz = java.lang.Class.class;
 //		Class<?> clazz = SndngMailDtlsDAO.class;
-		Class<?> clazz = SndngMailRegistDAO.class;
+//		Class<?> clazz = SndngMailRegistDAO.class;
+		Class<?> clazz = AuthorManageDAO.class;
 		egovLogger.debug("clazz: {}", clazz);
 
 		Method m[] = Reflect.getDeclaredMethodsInOrder(clazz);
@@ -34,7 +35,7 @@ public class ReflectTest {
 			egovLogger.debug("method: {}", m[i].toString());
 			egovLogger.debug("getName: {}", m[i].getName());
 
-			sb.append("God_A");
+			sb.append("A");
 			sb.append(String.format("%0" + String.valueOf(m.length).length() + "d", i + 1));
 			sb.append("_");
 			sb.append(m[i].getName());

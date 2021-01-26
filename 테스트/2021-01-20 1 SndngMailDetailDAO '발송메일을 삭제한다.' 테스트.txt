@@ -31,9 +31,20 @@ God_A2_selectAtchmnFileList
 데이터 없음
 
 SndngMailRegistDAO '발송결과를 수정한다.' 테스트
-*God_A3_updateSndngMail
+God_A3_updateSndngMail
 
-AuthorManageDAO.java
+*AuthorManageDAO.java
+
+AuthorManageDAO '권한목록을 조회한다.' 테스트
+*A1_selectAuthorList
+
+A2_selectAuthor
+A3_insertAuthor
+A4_updateAuthor
+A5_deleteAuthor
+A6_selectAuthorListTotCnt
+A7_selectAuthorAllList
+
 AuthorRoleManageDAO.java
 LoginPolicyDAO.java
 LoginDAO.java
