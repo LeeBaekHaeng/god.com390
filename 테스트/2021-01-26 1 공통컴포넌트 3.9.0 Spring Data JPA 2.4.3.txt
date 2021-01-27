@@ -13,7 +13,8 @@ repository
 ComTnGnrlMberRepository
 comtngnrlmberrepository
 일반회원 비밀번호정답
-* 일반회원 상세주소
+일반회원 상세주소
+* 일반회원 잠금최종시점 완료
 
 기업회원	COMTNENTRPRSMBER
 업무사용자	COMTNEMPLYRINFO
