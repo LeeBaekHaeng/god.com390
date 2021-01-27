@@ -36,9 +36,20 @@ God_A3_updateSndngMail
 *AuthorManageDAO.java
 
 AuthorManageDAO '권한목록을 조회한다.' 테스트
-*A1_selectAuthorList
+A1_selectAuthorList
 
-A2_selectAuthor
+---
+
+AuthorManageDAO '권한을 조회한다.' 테스트
+
+*A2_selectAuthor
+
+select * from COMTNAUTHORINFO
+where AUTHOR_CODE = 'IS_AUTHENTICATED_ANONYMOUSLY'
+;
+
+---
+
 A3_insertAuthor
 A4_updateAuthor
 A5_deleteAuthor
