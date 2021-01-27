@@ -4,7 +4,7 @@ target/
 .classpath
 .project
 *.log
-#bin/
+bin/
 .idea
 *.iml
 build/
