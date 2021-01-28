@@ -10,11 +10,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration({ "classpath*:egovframework/spring/com/**/context-*.xml",
 		"classpath*:god/spring/test/**/context-*.xml" })
 @ActiveProfiles({ "mysql", "dummy" })
+@Transactional
 public abstract class GodTestAbstract {
 
 	protected Logger egovLogger = LoggerFactory.getLogger(GodTestAbstract.class);
