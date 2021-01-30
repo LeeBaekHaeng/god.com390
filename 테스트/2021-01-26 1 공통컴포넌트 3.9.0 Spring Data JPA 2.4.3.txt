@@ -19,8 +19,11 @@ comtngnrlmberrepository
 일반회원 상세주소
 일반회원 잠금최종시점 완료
 
-*A2_findAll 목록
+A2_findAll 목록
 JpaSpecificationExecutor Page<T> findAll(@Nullable Specification<T> spec, Pageable pageable);
+
+*A3_findById 상세
+CrudRepository Optional<T> findById(ID id);
 
 ---
 
