@@ -53,11 +53,13 @@ A3_insertAuthor
 ---
 
 AuthorManageDAO '권한을 수정한다.' 테스트
-*A4_updateAuthor
+A4_updateAuthor
 
 ---
 
-A5_deleteAuthor
+AuthorManageDAO '권한을 삭제한다.' 테스트
+*A5_deleteAuthor
+
 A6_selectAuthorListTotCnt
 A7_selectAuthorAllList
 
