@@ -22,8 +22,10 @@ comtngnrlmberrepository
 A2_findAll 목록
 JpaSpecificationExecutor Page<T> findAll(@Nullable Specification<T> spec, Pageable pageable);
 
-*A3_findById 상세
+A3_findById 상세
 CrudRepository Optional<T> findById(ID id);
+
+*A4_update 일반회원 수정
 
 ---
 
