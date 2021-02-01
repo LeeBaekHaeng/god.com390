@@ -21,6 +21,7 @@ public class A1_인증된_사용자객체를_VO형식으로_가져온다 extends
 	public void test() {
 		egovLogger.debug("인증된 사용자객체를 VO형식으로 가져온다.");
 
+		@SuppressWarnings("static-access")
 		LoginVO loginVO = (LoginVO) egovUserDetailsHelper.getAuthenticatedUser();
 
 		egovLogger.debug("loginVO: {}", loginVO);

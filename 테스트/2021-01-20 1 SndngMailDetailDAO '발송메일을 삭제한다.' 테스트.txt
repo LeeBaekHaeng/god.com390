@@ -58,9 +58,11 @@ A4_updateAuthor
 ---
 
 AuthorManageDAO '권한을 삭제한다.' 테스트
-*A5_deleteAuthor
+A5_deleteAuthor
 
-A6_selectAuthorListTotCnt
+AuthorManageDAO '권한목록 총 갯수를 조회한다.' 테스트
+*A6_selectAuthorListTotCnt
+
 A7_selectAuthorAllList
 
 AuthorRoleManageDAO.java
