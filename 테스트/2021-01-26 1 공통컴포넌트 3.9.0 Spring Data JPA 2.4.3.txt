@@ -25,7 +25,10 @@ JpaSpecificationExecutor Page<T> findAll(@Nullable Specification<T> spec, Pageab
 A3_findById 상세
 CrudRepository Optional<T> findById(ID id);
 
-*A4_update 일반회원 수정
+A4_update 일반회원 수정
+
+CrudRepository.deleteById 일반회원 삭제
+A5_delete 일반회원 삭제
 
 ---
 
