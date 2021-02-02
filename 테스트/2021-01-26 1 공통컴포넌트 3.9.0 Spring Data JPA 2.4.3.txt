@@ -30,6 +30,10 @@ A4_update 일반회원 수정
 CrudRepository.deleteById 일반회원 삭제
 A5_delete 일반회원 삭제
 
+*일반회원 서비스 저장
+ComTnGnrlMberService
+comtngnrlmberservice
+
 ---
 
 기업회원	COMTNENTRPRSMBER

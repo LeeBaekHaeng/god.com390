@@ -18,6 +18,11 @@ public class ComTnGnrlMberService {
 
 	private final ComTnGnrlMberRepository repository;
 
+	public ComTnGnrlMber save(ComTnGnrlMber entity) {
+		log.debug("entity: {}", entity);
+		return repository.save(entity);
+	}
+
 	public List<ComTnGnrlMber> saveAll() {
 		log.debug("saveAll");
 
