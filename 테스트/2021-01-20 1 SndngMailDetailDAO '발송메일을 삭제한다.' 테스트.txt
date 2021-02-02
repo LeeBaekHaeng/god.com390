@@ -61,9 +61,10 @@ AuthorManageDAO '권한을 삭제한다.' 테스트
 A5_deleteAuthor
 
 AuthorManageDAO '권한목록 총 갯수를 조회한다.' 테스트
-*A6_selectAuthorListTotCnt
+A6_selectAuthorListTotCnt
 
-A7_selectAuthorAllList
+AuthorManageDAO '모든 권한목록을 조회한다.' 테스트
+*A7_selectAuthorAllList
 
 AuthorRoleManageDAO.java
 LoginPolicyDAO.java
