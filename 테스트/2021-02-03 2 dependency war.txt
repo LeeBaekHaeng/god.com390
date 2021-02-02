@@ -1,0 +1,61 @@
+dependency war
+
+부모
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.3.1</version>
+				<configuration>
+					<attachClasses>true</attachClasses>
+				</configuration>
+			</plugin>
+
+---
+
+자식
+		<dependency>
+			<groupId>god</groupId>
+			<artifactId>com</artifactId>
+			<version>1.0.0</version>
+			<classifier>classes</classifier>
+		</dependency>
+		<dependency>
+			<groupId>god</groupId>
+			<artifactId>com</artifactId>
+			<version>1.0.0</version>
+			<type>war</type>
+		</dependency>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.3.1</version>
+				<configuration>
+					<attachClasses>true</attachClasses>
+
+					<overlays>
+						<overlay>
+							<groupId>god</groupId>
+							<artifactId>com</artifactId>
+							<excludes>
+								<exclude>WEB-INF/lib/mariadb-java-client-2.2.5.jar</exclude>
+								<exclude>WEB-INF/lib/ojdbc6-11.2.0.3.jar</exclude>
+								<exclude>WEB-INF/lib/postgresql-9.4.1208.jar</exclude>
+								<exclude>WEB-INF/lib/tibero5-jdbc.jar</exclude>
+							</excludes>
+						</overlay>
+					</overlays>
+
+				</configuration>
+			</plugin>
+
+---
+
+[WARNING] 'dependencies.dependency.systemPath' for ojdbc:ojdbc:jar should not point at files within the project directory, ${basedir}/src/main/webapp/WEB-INF/lib/ojdbc6-11.2.0.3.jar will be unresolvable by dependent projects @ line 436, column 16
+[WARNING] 'dependencies.dependency.systemPath' for altibase:altibase-jdbc-driver:jar should not point at files within the project directory, ${basedir}/src/main/webapp/WEB-INF/lib/Altibase.jar will be unresolvable by dependent projects @ line 444, column 16
+[WARNING] 'dependencies.dependency.systemPath' for com.tmax.tibero:tibero-jdbc:jar should not point at files within the project directory, ${basedir}/src/main/webapp/WEB-INF/lib/tibero5-jdbc.jar will be unresolvable by dependent projects @ line 452, column 16
+[WARNING] 'dependencies.dependency.systemPath' for cubrid:cubrid-jdbc:jar should not point at files within the project directory, ${basedir}/src/main/webapp/WEB-INF/lib/cubrid_jdbc.jar will be unresolvable by dependent projects @ line 460, column 16
+[WARNING] 'dependencies.dependency.systemPath' for kr.go.mgov:smeapi:jar should not point at files within the project directory, ${basedir}/src/main/webapp/WEB-INF/lib/smeapi_2_7.jar will be unresolvable by dependent projects @ line 468, column 16
+[WARNING] 'dependencies.dependency.systemPath' for kr.go.gpki:gpkisecureweb:jar should not point at files within the project directory, ${basedir}/src/main/webapp/WEB-INF/lib/gpkisecureweb-1.0.4.9.jar will be unresolvable by dependent projects @ line 476, column 16
+[WARNING] 'dependencies.dependency.systemPath' for kr.go.gpki:libgpkiapi_jni:jar should not point at files within the project directory, ${basedir}/src/main/webapp/WEB-INF/lib/libgpkiapi_jni-1.4.0.0.jar will be unresolvable by dependent projects @ line 484, column 16
+
