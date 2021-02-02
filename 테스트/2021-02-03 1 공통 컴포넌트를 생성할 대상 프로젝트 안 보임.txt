@@ -1,0 +1,7 @@
+공통 컴포넌트를 생성할 대상 프로젝트 안 보임
+
+eGovFrame Common Component
+
+.project
+
+<nature>egovframework.dev.imp.ide.natures.egovnature</nature>
