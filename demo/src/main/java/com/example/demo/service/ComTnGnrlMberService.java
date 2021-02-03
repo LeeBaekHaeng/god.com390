@@ -3,6 +3,9 @@ package com.example.demo.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.entity.ComTnGnrlMber;
@@ -21,6 +24,10 @@ public class ComTnGnrlMberService {
 	public ComTnGnrlMber save(ComTnGnrlMber entity) {
 		log.debug("entity: {}", entity);
 		return repository.save(entity);
+	}
+
+	public Page<ComTnGnrlMber> findAll(Specification<ComTnGnrlMber> spec, Pageable pageable) {
+		return repository.findAll(spec, pageable);
 	}
 
 	public List<ComTnGnrlMber> saveAll() {
