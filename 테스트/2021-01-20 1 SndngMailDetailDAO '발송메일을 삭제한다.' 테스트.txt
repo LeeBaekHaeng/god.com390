@@ -64,8 +64,28 @@ AuthorManageDAO '권한목록 총 갯수를 조회한다.' 테스트
 A6_selectAuthorListTotCnt
 
 AuthorManageDAO '모든 권한목록을 조회한다.' 테스트
-*A7_selectAuthorAllList
+A7_selectAuthorAllList
+
+---
 
 AuthorRoleManageDAO.java
+
+authorrolemanagedao
+
+AuthorRoleManageDAO '권한 롤 관계정보를 조회' 테스트
+*A1_selectAuthorRole
+[log4j]2021-02-04 04:16:53,878 ERROR [god.test.GodTestAbstract] nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for authorRoleManageDAO.selectAuthorRole
+### Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for authorRoleManageDAO.selectAuthorRole
+selectAuthorRole mybatis sql 없음
+
+A2_selectAuthorRoleList
+A3_insertAuthorRole
+A4_updateAuthorRole
+A5_deleteAuthorRole
+A6_selectAuthorRoleListTotCnt
+
+---
+
 LoginPolicyDAO.java
 LoginDAO.java

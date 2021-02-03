@@ -7,7 +7,7 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import egovframework.com.sec.ram.service.impl.AuthorManageDAO;
+import egovframework.com.sec.ram.service.impl.AuthorRoleManageDAO;
 
 public class ReflectTest {
 
@@ -24,7 +24,9 @@ public class ReflectTest {
 //		Class<?> clazz = java.lang.Class.class;
 //		Class<?> clazz = SndngMailDtlsDAO.class;
 //		Class<?> clazz = SndngMailRegistDAO.class;
-		Class<?> clazz = AuthorManageDAO.class;
+//		Class<?> clazz = AuthorManageDAO.class;
+		Class<?> clazz = AuthorRoleManageDAO.class;
+
 		egovLogger.debug("clazz: {}", clazz);
 
 		Method m[] = Reflect.getDeclaredMethodsInOrder(clazz);
