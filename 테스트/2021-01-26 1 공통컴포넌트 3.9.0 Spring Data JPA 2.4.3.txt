@@ -34,7 +34,9 @@ A5_delete 일반회원 삭제
 ComTnGnrlMberService
 comtngnrlmberservice
 
-*일반회원 서비스 페이징
+일반회원 서비스 페이징
+
+*일반회원 서비스 상세 조회
 
 ---
 
