@@ -2,7 +2,6 @@ package com.example.demo.service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -32,12 +31,13 @@ public class ComTnGnrlMberService {
 	}
 
 	public ComTnGnrlMber findById(String id) {
-		Optional<ComTnGnrlMber> optional = repository.findById(id);
-		if (optional.isPresent()) {
-			return optional.get();
-		} else {
-			return null;
-		}
+//		Optional<ComTnGnrlMber> optional = repository.findById(id);
+//		if (optional.isPresent()) {
+//			return optional.get();
+//		} else {
+//			return new ComTnGnrlMber();
+//		}
+		return repository.findById(id).orElseGet(ComTnGnrlMber::new);
 	}
 
 	public List<ComTnGnrlMber> saveAll() {
