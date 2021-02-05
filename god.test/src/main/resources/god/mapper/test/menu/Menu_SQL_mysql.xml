@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="god.test.menu.mapper.MenuMapper">
+
+	<select id="selectList"
+		parameterType="egovframework.com.sym.mnu.mcm.service.MenuSiteMapVO"
+		resultType="egovframework.rte.psl.dataaccess.util.EgovMap">
+<![CDATA[
+WITH RECURSIVE employee_paths (MENU_NO, MENU_NM, path, UPPER_MENU_NO, PROGRM_FILE_NM) AS
+(
+  SELECT MENU_NO, MENU_NM, CAST(lpad(MENU_ORDR, 3, '0') AS CHAR(200)), UPPER_MENU_NO, PROGRM_FILE_NM
+    FROM COMTNMENUINFO
+    WHERE UPPER_MENU_NO = 0 and MENU_NO != 0
+  UNION ALL
+  SELECT e.MENU_NO, e.MENU_NM, CONCAT(ep.path, ',', lpad(e.MENU_ORDR, 3, '0')), e.UPPER_MENU_NO, e.PROGRM_FILE_NM
+    FROM employee_paths AS ep JOIN COMTNMENUINFO AS e
+      ON ep.MENU_NO = e.UPPER_MENU_NO
+)
+select
+    MENU_NO,
+    MENU_NM,
+    path,
+    UPPER_MENU_NO,
+    char_length(path) - char_length(replace(path, ',', '')) + 1 level,
+    PROGRM_FILE_NM,
+    (SELECT C.URL FROM COMTNPROGRMLIST C WHERE employee_paths.PROGRM_FILE_NM = C.PROGRM_FILE_NM) AS chkURL
+FROM employee_paths
+]]>
+
+		<if test="authorCode != null">
+<![CDATA[
+where menu_no in (select menu_no from COMTNMENUCREATDTLS where AUTHOR_CODE = #{authorCode})
+]]>
+		</if>
+
+<![CDATA[
+ORDER BY path
+]]>
+	</select>
+
+</mapper>

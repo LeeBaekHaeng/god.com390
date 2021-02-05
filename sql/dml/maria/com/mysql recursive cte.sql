@@ -29,3 +29,5 @@ select
 MENU_NO, MENU_NM, path, UPPER_MENU_NO,
  char_length(path) - char_length(replace(path, ',', '')) + 1 level
 FROM employee_paths ORDER BY path;
+
+select * from COMTNAUTHORROLERELATE;

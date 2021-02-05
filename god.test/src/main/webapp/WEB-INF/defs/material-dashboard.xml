@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="god.material-dashboard"
+		template="/WEB-INF/jsp/god/test/layouts/material-dashboard/layout.jsp">
+
+		<put-attribute name="title" value="god 갓" />
+
+		<put-attribute name="header"
+			value="/WEB-INF/jsp/god/test/layouts/material-dashboard/header.jsp" />
+		<put-attribute name="menu"
+			value="/WEB-INF/jsp/god/test/layouts/material-dashboard/menu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/god/test/layouts/material-dashboard/body.jsp" />
+		<put-attribute name="footer"
+			value="/WEB-INF/jsp/god/test/layouts/material-dashboard/footer.jsp" />
+	</definition>
+
+	<definition name="egovframework/com/*/*"
+		extends="god.material-dashboard">
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/egovframework/com/{1}/{2}.jsp" />
+	</definition>
+
+	<definition name="egovframework/com/*/*/*"
+		extends="god.material-dashboard">
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/egovframework/com/{1}/{2}/{3}.jsp" />
+	</definition>
+
+	<definition name="god/test/*/*"
+		extends="god.material-dashboard">
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/god/test/{1}/{2}.jsp" />
+	</definition>
+
+	<definition name="egovframework/com/cmm/EgovUnitMain"
+		template="/WEB-INF/jsp/egovframework/com/cmm/EgovUnitMain.jsp">
+	</definition>
+	<definition name="egovframework/com/cmm/EgovUnitTop"
+		template="/WEB-INF/jsp/egovframework/com/cmm/EgovUnitTop.jsp">
+	</definition>
+	<definition name="egovframework/com/cmm/EgovUnitBottom"
+		template="/WEB-INF/jsp/egovframework/com/cmm/EgovUnitBottom.jsp">
+	</definition>
+	<definition name="egovframework/com/cmm/EgovUnitContent"
+		template="/WEB-INF/jsp/egovframework/com/cmm/EgovUnitContent.jsp">
+	</definition>
+	<definition name="egovframework/com/cmm/EgovUnitLeft"
+		template="/WEB-INF/jsp/egovframework/com/cmm/EgovUnitLeft.jsp">
+	</definition>
+
+</tiles-definitions>
