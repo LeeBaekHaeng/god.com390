@@ -36,7 +36,9 @@ comtngnrlmberservice
 
 일반회원 서비스 페이징
 
-*일반회원 서비스 상세 조회
+일반회원 서비스 상세 조회
+
+*일반회원 서비스 수정 findById save
 
 ---
 

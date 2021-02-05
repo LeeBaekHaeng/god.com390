@@ -40,6 +40,29 @@ public class ComTnGnrlMberService {
 		return repository.findById(id).orElseGet(ComTnGnrlMber::new);
 	}
 
+	public ComTnGnrlMber update(ComTnGnrlMber entity) {
+		log.debug("entity: {}", entity);
+		log.debug("getMberId: {}", entity.getMberId());
+		log.debug("getPassword: {}", entity.getPassword());
+
+		ComTnGnrlMber find = repository.findById(entity.getMberId()).orElseGet(ComTnGnrlMber::new);
+		find.setPassword(entity.getPassword());
+
+//		TODO http://modelmapper.org/getting-started/
+
+		log.debug("find: {}", find);
+		log.debug("getMberId: {}", find.getMberId());
+		log.debug("getPassword: {}", find.getPassword());
+
+		ComTnGnrlMber save = repository.save(find);
+
+		log.debug("save: {}", save);
+		log.debug("getMberId: {}", save.getMberId());
+		log.debug("getPassword: {}", save.getPassword());
+
+		return save;
+	}
+
 	public List<ComTnGnrlMber> saveAll() {
 		log.debug("saveAll");
 
