@@ -1,0 +1,36 @@
+ModelMapper 사용법
+
+http://modelmapper.org/getting-started/
+
+---
+
+Setting Up
+설정
+<dependency>
+  <groupId>org.modelmapper</groupId>
+  <artifactId>modelmapper</artifactId>
+  <version>2.3.0</version>
+</dependency>
+
+---
+
+Mapping
+매핑
+
+Source model
+소스 모델
+
+Destination Model
+목적지 모델
+
+ModelMapper modelMapper = new ModelMapper();
+OrderDTO orderDTO = modelMapper.map(order, OrderDTO.class);
+
+---
+
+has a non-private no-argument constructor
+
+has a non-private no-argument constructor modelmapper
+
+Entity to DTO, DTO to Entity 그리고 ModelMapper
+https://dbbymoon.tistory.com/4

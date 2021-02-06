@@ -20,6 +20,12 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
+
+//@NoArgsConstructor
+//@RequiredArgsConstructor
+//@AllArgsConstructor
+
+//@Builder
 public class ComTnGnrlMber {
 
 	@Id

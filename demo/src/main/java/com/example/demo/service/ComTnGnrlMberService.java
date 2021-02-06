@@ -3,11 +3,13 @@ package com.example.demo.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.dto.ComTnGnrlMberDTO;
 import com.example.demo.entity.ComTnGnrlMber;
 import com.example.demo.repository.ComTnGnrlMberRepository;
 
@@ -24,6 +26,12 @@ public class ComTnGnrlMberService {
 	public ComTnGnrlMber save(ComTnGnrlMber entity) {
 		log.debug("entity: {}", entity);
 		return repository.save(entity);
+	}
+
+	public ComTnGnrlMberDTO save(ComTnGnrlMberDTO dto) {
+		log.debug("dto: {}", dto);
+		ModelMapper modelMapper = new ModelMapper();
+		return modelMapper.map(repository.save(modelMapper.map(dto, ComTnGnrlMber.class)), ComTnGnrlMberDTO.class);
 	}
 
 	public Page<ComTnGnrlMber> findAll(Specification<ComTnGnrlMber> spec, Pageable pageable) {
