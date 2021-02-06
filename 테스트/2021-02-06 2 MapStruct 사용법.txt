@@ -7,3 +7,5 @@ https://www.baeldung.com/java-performance-mapping-frameworks
 https://meetup.toast.com/posts/213
 
 https://mapstruct.org/documentation/installation/
+
+/demo/target/generated-test-sources/test-annotations/mapstruct/CarMapperImpl.java
