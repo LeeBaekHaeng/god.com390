@@ -7,3 +7,47 @@ lombok-1.18.16.jar
 
 eclipse.ini
 -javaagent:lombok-1.18.16.jar
+
+/demo/src/test/java/com/example/demo/GetterSetterExampleTest.java
+
+/demo/src/main/java/lombok/GodLombokV1.java
+
+/demo/src/test/java/lombok/GodLombokV1Test.java
+
+v1
+@Getter
+@Setter
+
+@ToString(of = { "id", "name" })
+
+@NoArgsConstructor
+@RequiredArgsConstructor
+@AllArgsConstructor
+
+v2
+@Getter
+
+@ToString(of = { "id", "name" })
+
+@NoArgsConstructor
+@RequiredArgsConstructor
+@AllArgsConstructor
+
+@Builder
+
+---
+
+@Getter
+//@Setter
+
+@ToString(of = { "id", "name" })
+
+//@NoArgsConstructor
+//@RequiredArgsConstructor
+@AllArgsConstructor
+
+@Builder
+
+GodLombokV2 godLombokV2 = GodLombokV2.builder().id(1L).name("test 이름").build();
+
+---
