@@ -1,0 +1,56 @@
+MapStruct lombok 테스트
+
+mapstruct maven clean install lombok
+
+https://github.com/mapstruct/mapstruct/issues/1270
+
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ demo ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 58 source files to C:\EGOVFRAME390\git\god.com390\demo\target\test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/EGOVFRAME390/git/god.com390/demo/src/test/java/mapstruct/CarMapper.java:[11,9] No property named "numberOfSeats" exists in source parameter(s). Did you mean "null"?
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 22.531 s
+[INFO] Finished at: 2021-02-07T08:25:25+09:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project demo: Compilation failure
+[ERROR] /C:/EGOVFRAME390/git/god.com390/demo/src/test/java/mapstruct/CarMapper.java:[11,9] No property named "numberOfSeats" exists in source parameter(s). Did you mean "null"?
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+No property named "numberOfSeats" exists in source parameter(s). Did you mean "null"?
+
+순서대로
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<!-- <version>3.8.1</version> -->
+				<configuration>
+					<source>1.8</source> <!-- depending on your project -->
+					<target>1.8</target> <!-- depending on your project -->
+					<annotationProcessorPaths>
+						<path>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+							<version>${lombok.version}</version>
+						</path>
+						<path>
+							<groupId>org.mapstruct</groupId>
+							<artifactId>mapstruct-processor</artifactId>
+							<version>${org.mapstruct.version}</version>
+						</path>
+						<!-- other annotation processors -->
+					</annotationProcessorPaths>
+				</configuration>
+			</plugin>

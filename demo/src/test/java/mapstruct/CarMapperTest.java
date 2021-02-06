@@ -11,7 +11,14 @@ class CarMapperTest {
 	void test() {
 		// given
 //		Car car = new Car("Morris", 5, CarType.SEDAN);
-		Car car = new Car("Morris", 5);
+//		Car car = new Car("Morris", 5);
+
+		// @formatter:off
+		Car car = Car.builder()
+				.make("Morris")
+				.numberOfSeats(5)
+				.build();
+		// @formatter:on
 
 		// when
 		CarDto carDto = CarMapper.INSTANCE.carToCarDto(car);

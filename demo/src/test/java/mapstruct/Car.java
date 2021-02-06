@@ -1,11 +1,15 @@
 package mapstruct;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
 
-//@Getter
+@Getter
 //@Setter
 
 @AllArgsConstructor
+
+@Builder
 public class Car {
 	private String make;
 	private int numberOfSeats;
@@ -13,19 +17,19 @@ public class Car {
 
 	// constructor, getters, setters etc.
 
-	public String getMake() {
-		return make;
-	}
-
-	public void setMake(String make) {
-		this.make = make;
-	}
-
-	public int getNumberOfSeats() {
-		return numberOfSeats;
-	}
-
-	public void setNumberOfSeats(int numberOfSeats) {
-		this.numberOfSeats = numberOfSeats;
-	}
+//	public String getMake() {
+//		return make;
+//	}
+//
+//	public void setMake(String make) {
+//		this.make = make;
+//	}
+//
+//	public int getNumberOfSeats() {
+//		return numberOfSeats;
+//	}
+//
+//	public void setNumberOfSeats(int numberOfSeats) {
+//		this.numberOfSeats = numberOfSeats;
+//	}
 }
