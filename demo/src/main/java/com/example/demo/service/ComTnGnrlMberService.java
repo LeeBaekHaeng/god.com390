@@ -71,6 +71,10 @@ public class ComTnGnrlMberService {
 		return save;
 	}
 
+	public void deleteById(String id) {
+		repository.deleteById(id);
+	}
+
 	public List<ComTnGnrlMber> saveAll() {
 		log.debug("saveAll");
 
