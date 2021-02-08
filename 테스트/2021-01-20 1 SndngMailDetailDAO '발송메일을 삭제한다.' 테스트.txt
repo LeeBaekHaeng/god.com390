@@ -86,14 +86,16 @@ AuthorRoleManageDAO '권한 롤 관계정보를 화면에서 입력하여 입력
 A3_insertAuthorRole
 
 AuthorRoleManageDAO '수정된 권한 롤 관계정보를 데이터베이스에 반영' 테스트
-*A4_updateAuthorRole
+A4_updateAuthorRole
 [log4j]2021-02-08 07:23:47,851 ERROR [god.test.GodTestAbstract] nested exception is org.apache.ibatis.exceptions.PersistenceException: 
 ### Error updating database.  Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for authorRoleManageDAO.updateAuthorRole
 ### Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for authorRoleManageDAO.updateAuthorRole
 [log4j]2021-02-08 07:23:47,856 DEBUG [god.test.GodTestAbstract] result: false
 사용 안 하는 코드
 
-A5_deleteAuthorRole
+AuthorRoleManageDAO '권한 롤 관계정보를 화면에 조회하여 데이터베이스에서 삭제' 테스트
+*A5_deleteAuthorRole
+
 A6_selectAuthorRoleListTotCnt
 
 ---
