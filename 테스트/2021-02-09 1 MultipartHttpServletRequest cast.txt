@@ -1,0 +1,17 @@
+MultipartHttpServletRequest cast
+
+//		MultipartHttpServletRequest multiRequest = (MultipartHttpServletRequest) request;
+		MultipartHttpServletRequest multiRequest = WebUtils.getNativeRequest(request,
+				MultipartHttpServletRequest.class);
+
+MultipartHttpServletRequest mptRequest = (MultipartHttpServletRequest) request;
+
+java.lang.ClassCastException: egovframework.com.cmm.filter.HTMLTagFilterRequestWrapper cannot be cast to org.springframework.web.multipart.MultipartHttpServletRequest
+
+HTMLTagFilterRequestWrapper 래핑 해제
+
+WebUtils.getNativeRequest
+
+사용 가능한 경우 지정된 유형의 적절한 요청 객체를 반환하고 필요한만큼 주어진 요청을 래핑 해제합니다.
+
+https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/util/WebUtils.html#getNativeRequest-javax.servlet.ServletRequest-java.lang.Class-

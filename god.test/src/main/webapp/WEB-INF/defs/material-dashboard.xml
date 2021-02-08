@@ -27,11 +27,9 @@
 			value="/WEB-INF/jsp/egovframework/com/{1}/{2}.jsp" />
 	</definition>
 
-	<definition name="egovframework/com/*/*/*"
-		extends="god.material-dashboard">
-		<put-attribute name="body"
-			value="/WEB-INF/jsp/egovframework/com/{1}/{2}/{3}.jsp" />
-	</definition>
+	<!-- <definition name="egovframework/com/*/*/*" extends="god.material-dashboard"> 
+		<put-attribute name="body" value="/WEB-INF/jsp/egovframework/com/{1}/{2}/{3}.jsp" 
+		/> </definition> -->
 
 	<definition name="god/test/*/*"
 		extends="god.material-dashboard">
