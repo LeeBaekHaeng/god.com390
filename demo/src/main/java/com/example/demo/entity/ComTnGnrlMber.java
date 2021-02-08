@@ -9,7 +9,10 @@ import javax.persistence.Id;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
@@ -21,11 +24,11 @@ import lombok.ToString;
 @Setter
 @ToString
 
-//@NoArgsConstructor
+@NoArgsConstructor
 //@RequiredArgsConstructor
-//@AllArgsConstructor
+@AllArgsConstructor
 
-//@Builder
+@Builder
 public class ComTnGnrlMber {
 
 	@Id

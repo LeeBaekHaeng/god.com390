@@ -40,7 +40,9 @@ comtngnrlmberservice
 
 일반회원 서비스 수정 findById save
 
-*일반회원 서비스 삭제 deleteById
+일반회원 서비스 삭제 deleteById
+
+*일반회원 save entity to dto MapStruct
 
 ---
 

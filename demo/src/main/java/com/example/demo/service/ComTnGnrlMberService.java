@@ -10,6 +10,7 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.dto.ComTnGnrlMberDTO;
+import com.example.demo.dto.ComTnGnrlMberMapper;
 import com.example.demo.entity.ComTnGnrlMber;
 import com.example.demo.repository.ComTnGnrlMberRepository;
 
@@ -32,6 +33,16 @@ public class ComTnGnrlMberService {
 		log.debug("dto: {}", dto);
 		ModelMapper modelMapper = new ModelMapper();
 		return modelMapper.map(repository.save(modelMapper.map(dto, ComTnGnrlMber.class)), ComTnGnrlMberDTO.class);
+	}
+
+	public ComTnGnrlMberDTO save3(ComTnGnrlMberDTO dto) {
+		log.debug("dto: {}", dto);
+		ComTnGnrlMber entity = ComTnGnrlMberMapper.INSTANCE.dtoToEntity(dto);
+		log.debug("entity: {}", entity);
+		repository.save(entity);
+		ComTnGnrlMberDTO dto2 = ComTnGnrlMberMapper.INSTANCE.entityToDto(entity);
+		log.debug("dto2: {}", dto2);
+		return dto2;
 	}
 
 	public Page<ComTnGnrlMber> findAll(Specification<ComTnGnrlMber> spec, Pageable pageable) {
