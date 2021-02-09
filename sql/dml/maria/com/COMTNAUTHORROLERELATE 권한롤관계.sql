@@ -1,7 +1,7 @@
 select
 	*
 from
-	COMTNAUTHORROLERELATE /* ±ÇÇÑ·Ñ°ü°è */;
+	COMTNAUTHORROLERELATE /* ê¶Œí•œë¡¤ê´€ê³„ */;
 
 select
 	*
