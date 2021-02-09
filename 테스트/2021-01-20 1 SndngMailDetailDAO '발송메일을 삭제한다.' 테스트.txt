@@ -94,9 +94,10 @@ A4_updateAuthorRole
 사용 안 하는 코드
 
 AuthorRoleManageDAO '권한 롤 관계정보를 화면에 조회하여 데이터베이스에서 삭제' 테스트
-*A5_deleteAuthorRole
+A5_deleteAuthorRole
 
-A6_selectAuthorRoleListTotCnt
+AuthorRoleManageDAO '목록조회 카운트를 반환한다' 테스트
+*A6_selectAuthorRoleListTotCnt
 
 ---
 
