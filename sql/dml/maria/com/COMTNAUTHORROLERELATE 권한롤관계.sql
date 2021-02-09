@@ -1,7 +1,7 @@
 select
 	*
 from
-	COMTNAUTHORROLERELATE;
+	COMTNAUTHORROLERELATE /* 권한롤관계 */;
 
 select
 	*
