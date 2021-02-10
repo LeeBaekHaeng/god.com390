@@ -9,6 +9,9 @@ import javax.persistence.Id;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
+import com.example.demo.dto.ComTnGnrlMberDTO;
+import com.example.demo.dto.ComTnGnrlMberMapper;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -102,5 +105,13 @@ public class ComTnGnrlMber {
 
 	@Column
 	private LocalDateTime lockLastPnttm;
+
+	public ComTnGnrlMberDTO of(ComTnGnrlMber entity) {
+		return ComTnGnrlMberMapper.INSTANCE.entityToDto(entity);
+	}
+
+//	public ComTnGnrlMber of(ComTnGnrlMberDTO dto) {
+//		return ComTnGnrlMberMapper.INSTANCE.dtoToEntity(dto);
+//	}
 
 }

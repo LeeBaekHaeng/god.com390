@@ -2,9 +2,11 @@ package com.example.demo.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
@@ -47,6 +49,12 @@ public class ComTnGnrlMberService {
 
 	public Page<ComTnGnrlMber> findAll(Specification<ComTnGnrlMber> spec, Pageable pageable) {
 		return repository.findAll(spec, pageable);
+	}
+
+	public Page<ComTnGnrlMberDTO> findAll2(Specification<ComTnGnrlMber> spec, Pageable pageable) {
+		Page<ComTnGnrlMber> page = repository.findAll(spec, pageable);
+		List<ComTnGnrlMberDTO> content = page.get().map(mapper -> mapper.of(mapper)).collect(Collectors.toList());
+		return new PageImpl<>(content, pageable, page.getTotalElements());
 	}
 
 	public ComTnGnrlMber findById(String id) {
