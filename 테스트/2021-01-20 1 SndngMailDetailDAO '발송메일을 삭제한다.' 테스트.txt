@@ -106,9 +106,11 @@ LoginPolicyDAO.java
 loginpolicydao
 
 LoginPolicyDAO '로그인정책 목록을 조회한다.' 테스트
-*A1_selectLoginPolicyList
+A1_selectLoginPolicyList
 
-A2_selectLoginPolicy
+LoginPolicyDAO '로그인정책 목록의 상세정보를 조회한다.' 테스트
+*A2_selectLoginPolicy
+
 A3_selectLoginPolicyListTotCnt
 A4_insertLoginPolicy
 A5_updateLoginPolicy
