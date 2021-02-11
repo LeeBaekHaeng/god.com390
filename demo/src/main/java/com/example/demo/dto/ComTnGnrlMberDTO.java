@@ -77,4 +77,8 @@ public class ComTnGnrlMberDTO {
 		return ComTnGnrlMberMapper.INSTANCE.dtoToEntity(dto);
 	}
 
+	public ComTnGnrlMber of() {
+		return ComTnGnrlMberMapper.INSTANCE.dtoToEntity(this);
+	}
+
 }

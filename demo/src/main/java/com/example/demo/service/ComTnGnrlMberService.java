@@ -67,6 +67,12 @@ public class ComTnGnrlMberService {
 		return repository.findById(id).orElseGet(ComTnGnrlMber::new);
 	}
 
+	public ComTnGnrlMberDTO findById2(String id) {
+//		ComTnGnrlMber entity = repository.findById(id).orElseGet(ComTnGnrlMber::new);
+//		return entity.of(entity);
+		return repository.findById(id).orElseGet(ComTnGnrlMber::new).of();
+	}
+
 	public ComTnGnrlMber update(ComTnGnrlMber entity) {
 		log.debug("entity: {}", entity);
 		log.debug("getMberId: {}", entity.getMberId());

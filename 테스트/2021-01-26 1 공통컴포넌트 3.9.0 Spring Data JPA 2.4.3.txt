@@ -45,8 +45,11 @@ comtngnrlmberservice
 일반회원 save entity to dto MapStruct
 
 일반회원 서비스 페이징 entity to dto MapStruct
-*A2_findAll2_MapStruct
+A2_findAll2_MapStruct
 https://cnpnote.tistory.com/entry/SPRING-Spring-%EB%8D%B0%EC%9D%B4%ED%84%B0-PageImpl%EC%9D%B4-%EC%98%AC%EB%B0%94%EB%A5%B8-%ED%81%AC%EA%B8%B0%EC%9D%98-%ED%8E%98%EC%9D%B4%EC%A7%80%EB%A5%BC-%EB%B0%98%ED%99%98%ED%95%98%EC%A7%80-%EC%95%8A%EC%8A%B5%EB%8B%88%EA%B9%8C
+
+일반회원 서비스 상세 조회 entity to dto MapStruct
+*A3_findById2_MapStruct
 
 ---
 
