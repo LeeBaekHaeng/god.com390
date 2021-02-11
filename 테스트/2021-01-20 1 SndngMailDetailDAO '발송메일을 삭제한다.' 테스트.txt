@@ -97,9 +97,24 @@ AuthorRoleManageDAO '권한 롤 관계정보를 화면에 조회하여 데이터
 A5_deleteAuthorRole
 
 AuthorRoleManageDAO '목록조회 카운트를 반환한다' 테스트
-*A6_selectAuthorRoleListTotCnt
+A6_selectAuthorRoleListTotCnt
 
 ---
 
 LoginPolicyDAO.java
+
+loginpolicydao
+
+LoginPolicyDAO '로그인정책 목록을 조회한다.' 테스트
+*A1_selectLoginPolicyList
+
+A2_selectLoginPolicy
+A3_selectLoginPolicyListTotCnt
+A4_insertLoginPolicy
+A5_updateLoginPolicy
+A6_deleteLoginPolicy
+A7_selectLoginPolicyResult
+
+---
+
 LoginDAO.java

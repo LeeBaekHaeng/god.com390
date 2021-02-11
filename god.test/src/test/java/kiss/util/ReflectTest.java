@@ -7,7 +7,7 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import egovframework.com.sec.ram.service.impl.AuthorRoleManageDAO;
+import egovframework.com.uat.uap.service.impl.LoginPolicyDAO;
 
 public class ReflectTest {
 
@@ -25,7 +25,10 @@ public class ReflectTest {
 //		Class<?> clazz = SndngMailDtlsDAO.class;
 //		Class<?> clazz = SndngMailRegistDAO.class;
 //		Class<?> clazz = AuthorManageDAO.class;
-		Class<?> clazz = AuthorRoleManageDAO.class;
+//		Class<?> clazz = AuthorRoleManageDAO.class;
+		Class<?> clazz = LoginPolicyDAO.class;
+//		Class<?> clazz = LoginPolicyVO.class;
+//		Class<?> clazz = LoginPolicy.class;
 
 		egovLogger.debug("clazz: {}", clazz);
 
