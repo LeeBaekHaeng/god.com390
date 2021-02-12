@@ -61,3 +61,24 @@ where
 	1 = 1
 	and A.USER_ID = 'TEST1'
 ;
+
+select
+	COUNT(*) as totcnt
+from
+	COMVNUSERMASTER A
+left outer join COMTNLOGINPOLICY B on
+	A.USER_ID = B.EMPLYR_ID
+where
+	1 = 1
+;
+
+select
+	COUNT(*) as totcnt
+from
+	COMVNUSERMASTER A
+left outer join COMTNLOGINPOLICY B on
+	A.USER_ID = B.EMPLYR_ID
+where
+	1 = 1
+	and A.USER_NM like CONCAT('%' , '테스트1', '%')
+;

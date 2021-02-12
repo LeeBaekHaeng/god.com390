@@ -109,9 +109,11 @@ LoginPolicyDAO '로그인정책 목록을 조회한다.' 테스트
 A1_selectLoginPolicyList
 
 LoginPolicyDAO '로그인정책 목록의 상세정보를 조회한다.' 테스트
-*A2_selectLoginPolicy
+A2_selectLoginPolicy
 
-A3_selectLoginPolicyListTotCnt
+LoginPolicyDAO '로그인정책 목록 수를 조회한다.' 테스트
+*A3_selectLoginPolicyListTotCnt
+
 A4_insertLoginPolicy
 A5_updateLoginPolicy
 A6_deleteLoginPolicy
