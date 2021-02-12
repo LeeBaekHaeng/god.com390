@@ -10,6 +10,7 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.example.demo.dto.ComTnGnrlMberDTO;
 import com.example.demo.dto.ComTnGnrlMberMapper;
@@ -94,6 +95,25 @@ public class ComTnGnrlMberService {
 		log.debug("getPassword: {}", save.getPassword());
 
 		return save;
+	}
+
+	@Transactional
+	public ComTnGnrlMberDTO update2(ComTnGnrlMberDTO dto) {
+		log.debug("dto: {}", dto);
+		log.debug("getMberId: {}", dto.getMberId());
+		log.debug("getPassword: {}", dto.getPassword());
+
+		ComTnGnrlMber entity = dto.of();
+
+		ComTnGnrlMber find = repository.findById(entity.getMberId()).orElseGet(ComTnGnrlMber::new);
+		find.setPassword(dto.getPassword());
+//		find = find.of(dto);
+
+		log.debug("find: {}", find);
+		log.debug("getMberId: {}", find.getMberId());
+		log.debug("getPassword: {}", find.getPassword());
+
+		return find.of();
 	}
 
 	public void deleteById(String id) {

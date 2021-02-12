@@ -114,8 +114,8 @@ public class ComTnGnrlMber {
 		return ComTnGnrlMberMapper.INSTANCE.entityToDto(this);
 	}
 
-//	public ComTnGnrlMber of(ComTnGnrlMberDTO dto) {
-//		return ComTnGnrlMberMapper.INSTANCE.dtoToEntity(dto);
-//	}
+	public ComTnGnrlMber of(ComTnGnrlMberDTO dto) {
+		return ComTnGnrlMberMapper.INSTANCE.dtoToEntity(dto);
+	}
 
 }
