@@ -52,7 +52,10 @@ https://cnpnote.tistory.com/entry/SPRING-Spring-%EB%8D%B0%EC%9D%B4%ED%84%B0-Page
 A3_findById2_MapStruct
 
 일반회원 서비스 수정 entity to dto MapStruct
-*A4_update2_MapStruct
+A4_update2_MapStruct
+
+일반회원 서비스 삭제 entity to dto MapStruct
+*A5_delete2_MapStruct
 
 ---
 

@@ -120,6 +120,10 @@ public class ComTnGnrlMberService {
 		repository.deleteById(id);
 	}
 
+	public void deleteById(ComTnGnrlMberDTO dto) {
+		repository.deleteById(dto.getMberId());
+	}
+
 	public List<ComTnGnrlMber> saveAll() {
 		log.debug("saveAll");
 
