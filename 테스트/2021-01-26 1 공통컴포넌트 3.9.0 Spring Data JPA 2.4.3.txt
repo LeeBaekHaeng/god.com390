@@ -60,6 +60,15 @@ A4_update2_MapStruct
 ---
 
 기업회원	COMTNENTRPRSMBER
+
+COM_TN_ENTRPRS_MBER
+comtnentrprsmber
+ComTnEntrprsMber
+
+기업회원 @Entity 생성 EntrprsMber
+
+---
+
 업무사용자	COMTNEMPLYRINFO
 
 ---
