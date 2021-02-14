@@ -82,3 +82,5 @@ where
 	1 = 1
 	and A.USER_NM like CONCAT('%' , '테스트1', '%')
 ;
+
+select * from COMTNLOGINPOLICY /* 로그인정책 */;
