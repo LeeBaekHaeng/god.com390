@@ -67,6 +67,9 @@ ComTnEntrprsMber
 
 기업회원 @Entity 생성 EntrprsMber
 
+entrprsmberrepository
+*EntrprsMberRepository CrudRepository save
+
 ---
 
 업무사용자	COMTNEMPLYRINFO

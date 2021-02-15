@@ -1,6 +1,9 @@
 SELECT * FROM COMTNENTRPRSMBER /* 기업회원 */
 ;
 
+SELECT * FROM comtnentrprsmber /* 기업회원 */
+;
+
 select
 	c.COLUMN_NAME,
 	c.IS_NULLABLE,

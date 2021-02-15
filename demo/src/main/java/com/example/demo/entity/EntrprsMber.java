@@ -1,8 +1,11 @@
 package com.example.demo.entity;
 
+import java.time.LocalDateTime;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
@@ -14,6 +17,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Entity
+@Table(name = "COMTNENTRPRSMBER")
 @DynamicInsert
 @DynamicUpdate
 
@@ -42,19 +46,70 @@ public class EntrprsMber {
 	@Column(length = 13)
 	private String jurirno;
 
-	@Column(length = 60, nullable = false)
+	@Column(nullable = false, length = 60)
 	private String cmpnyNm;
 
 	@Column(length = 50)
 	private String cxfc;
 
-	@Column(length = 6, nullable = false)
+	@Column(nullable = false, length = 6)
 	private String zip;
 
-	@Column(length = 100, nullable = false)
+	@Column(nullable = false, length = 100)
 	private String adres;
 
-	@Column(length = 4, nullable = false)
+	@Column(nullable = false, length = 4)
 	private String entrprsMiddleTelno;
+
+	@Column(length = 20)
+	private String fxnum;
+
+	@Column(length = 1)
+	private String indutyCode;
+
+	@Column(nullable = false, length = 50)
+	private String applcntNm;
+
+	@Column(length = 200)
+	private String applcntIhidnum;
+
+	private LocalDateTime sbscrbDe;
+
+	@Column(length = 15)
+	private String entrprsMberSttus;
+
+	@Column(length = 200)
+	private String entrprsMberPassword;
+
+	@Column(nullable = false, length = 100)
+	private String entrprsMberPasswordHint;
+
+	@Column(nullable = false, length = 100)
+	private String entrprsMberPasswordCnsr;
+
+	@Column(length = 20)
+	private String groupId;
+
+	@Column(length = 100)
+	private String detailAdres;
+
+	@Column(nullable = false, length = 4)
+	private String entrprsEndTelno;
+
+	@Column(nullable = false, length = 4)
+	private String areaNo;
+
+	@Column(nullable = false, length = 50)
+	private String applcntEmailAdres;
+
+	@Column(nullable = false, length = 20)
+	private String esntlId;
+
+	@Column(length = 1)
+	private String lockAt;
+
+	private Integer lockCnt;
+
+	private LocalDateTime lockLastPnttm;
 
 }
