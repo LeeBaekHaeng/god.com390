@@ -68,7 +68,9 @@ ComTnEntrprsMber
 기업회원 @Entity 생성 EntrprsMber
 
 entrprsmberrepository
-*EntrprsMberRepository CrudRepository save
+EntrprsMberRepository CrudRepository save
+
+*기업회원 목록
 
 ---
 
