@@ -118,9 +118,11 @@ LoginPolicyDAO '로그인정책 정보를 신규로 등록한다.' 테스트
 A4_insertLoginPolicy
 
 LoginPolicyDAO '기 등록된 로그인정책 정보를 수정한다.' 테스트
-*A5_updateLoginPolicy
+A5_updateLoginPolicy
 
-A6_deleteLoginPolicy
+LoginPolicyDAO '기 등록된 로그인정책 정보를 삭제한다.' 테스트
+*A6_deleteLoginPolicy
+
 A7_selectLoginPolicyResult
 
 ---
