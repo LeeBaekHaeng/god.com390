@@ -1,5 +1,7 @@
 package egovframework.com.uat.uap.service.impl.loginpolicydao;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,11 +39,17 @@ public class A7_selectLoginPolicyResult extends GodTestAbstract {
 		LoginPolicyVO loginPolicyVO = new LoginPolicyVO();
 		loginPolicyVO.setEmplyrId("TEST1");
 
+		LoginPolicyVO result = null;
+
 		try {
-			dao.selectLoginPolicyResult(loginPolicyVO);
+			result = dao.selectLoginPolicyResult(loginPolicyVO);
 		} catch (Exception e) {
 			egovLogger.error(e.getMessage());
 		}
+
+		egovLogger.debug("result: {}", result);
+
+		assertEquals(result, null);
 	}
 
 }
