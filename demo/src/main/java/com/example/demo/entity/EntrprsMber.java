@@ -112,4 +112,8 @@ public class EntrprsMber {
 
 	private LocalDateTime lockLastPnttm;
 
+	public void set(String cmpnyNm) {
+		this.cmpnyNm = cmpnyNm;
+	}
+
 }

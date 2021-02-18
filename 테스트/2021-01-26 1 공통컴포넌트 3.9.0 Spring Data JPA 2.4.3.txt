@@ -72,7 +72,8 @@ EntrprsMberRepository CrudRepository save
 
 기업회원 목록
 
-*기업회원 상세
+기업회원 상세
+*기업회원 수정
 
 ---
 
