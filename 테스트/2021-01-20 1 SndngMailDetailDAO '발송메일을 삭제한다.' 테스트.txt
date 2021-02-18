@@ -124,9 +124,21 @@ LoginPolicyDAO '기 등록된 로그인정책 정보를 삭제한다.' 테스트
 A6_deleteLoginPolicy
 
 LoginPolicyDAO '로그인정책에 대한 현재 반영되어 있는 결과를 조회한다.' 테스트
-*A7_selectLoginPolicyResult
+A7_selectLoginPolicyResult
 사용하지 않음
 
 ---
 
 LoginDAO.java
+logindao
+
+LoginDAO 'EsntlId를 이용한 로그인을 처리한다' 테스트
+*A1_actionLoginByEsntlId
+
+A2_actionLogin
+A3_actionCrtfctLogin
+A4_searchId
+A5_searchPassword
+A6_updatePassword
+A7_selectLoginIncorrect
+A8_updateLoginIncorrect
