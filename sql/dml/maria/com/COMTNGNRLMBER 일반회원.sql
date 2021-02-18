@@ -1,7 +1,7 @@
 select
 	A.ESNTL_ID,
 	A.*
-from COMTNGNRLMBER /* �Ϲ�ȸ�� */ A
+from COMTNGNRLMBER /* 일반회원 */ A
 ;
 
 select * from COMTNENTRPRSMBER
