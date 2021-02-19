@@ -15,3 +15,5 @@ from information_schema.`COLUMNS` c
 where TABLE_SCHEMA = 'com'
 	and TABLE_NAME = 'comtnentrprsmber'
 ;
+
+select * from comvnusermaster;
