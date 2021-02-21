@@ -10,6 +10,9 @@ import javax.persistence.Table;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
+import com.example.demo.dto.EntrprsMberDto;
+import com.example.demo.dto.EntrprsMberMapper;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -114,6 +117,10 @@ public class EntrprsMber {
 
 	public void set(String cmpnyNm) {
 		this.cmpnyNm = cmpnyNm;
+	}
+
+	public EntrprsMberDto of() {
+		return EntrprsMberMapper.INSTANCE.entityToDto(this);
 	}
 
 }

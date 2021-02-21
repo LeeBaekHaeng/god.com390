@@ -74,7 +74,12 @@ EntrprsMberRepository CrudRepository save
 
 기업회원 상세
 기업회원 수정
-*기업회원 삭제
+기업회원 삭제
+
+entrprsmberservice
+EntrprsMberService
+
+*기업회원 저장 Service
 
 ---
 
