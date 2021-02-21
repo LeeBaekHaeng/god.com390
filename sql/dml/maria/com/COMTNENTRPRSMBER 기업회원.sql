@@ -17,3 +17,21 @@ where TABLE_SCHEMA = 'com'
 ;
 
 select * from comvnusermaster;
+
+-- 	<!-- 인증서 로그인 -->
+-- 	<select id="actionCrtfctLogin" resultMap="login">
+		
+		SELECT emplyr_id AS id
+		     , user_nm AS name
+		     , password AS password
+		     , ihidnum AS ihidNum
+		     , email_adres AS email
+		     , 'USR' AS userSe
+		     , orgnzt_id AS orgnztId
+		     , esntl_id AS uniqId
+, CRTFC_DN_VALUE
+		  FROM COMTNEMPLYRINFO
+-- 		 WHERE CRTFC_DN_VALUE = #{dn}
+		
+-- 	</select>
+;

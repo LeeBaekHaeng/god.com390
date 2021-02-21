@@ -136,9 +136,11 @@ LoginDAO 'EsntlId를 이용한 로그인을 처리한다' 테스트
 A1_actionLoginByEsntlId
 
 LoginDAO '일반 로그인을 처리한다' 테스트
-*A2_actionLogin
+A2_actionLogin
 
-A3_actionCrtfctLogin
+LoginDAO '인증서 로그인을 처리한다' 테스트
+*A3_actionCrtfctLogin
+
 A4_searchId
 A5_searchPassword
 A6_updatePassword
