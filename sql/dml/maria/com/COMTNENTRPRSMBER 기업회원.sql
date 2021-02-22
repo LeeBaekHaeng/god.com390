@@ -35,3 +35,25 @@ select * from comvnusermaster;
 		
 -- 	</select>
 ;
+
+SELECT mber_nm, mber_email_adres, mber_id
+FROM COMTNGNRLMBER
+;
+
+SELECT cmpny_nm, applcnt_email_adres, ENTRPRS_MBER_ID
+FROM COMTNENTRPRSMBER
+;
+
+SELECT user_nm, email_adres, emplyr_id
+FROM COMTNEMPLYRINFO
+;
+
+SELECT mber_id AS id FROM COMTNGNRLMBER WHERE mber_nm = '일반회원' AND mber_email_adres = 'egovframesupport@gmail.com' 
+AND mber_sttus = 'P'
+;
+
+SELECT ENTRPRS_MBER_ID AS id FROM COMTNENTRPRSMBER
+-- WHERE cmpny_nm = '테스트1'
+-- AND applcnt_email_adres = 'egovframesupport@gmail.com'
+-- AND entrprs_mber_sttus = 'P'
+;
