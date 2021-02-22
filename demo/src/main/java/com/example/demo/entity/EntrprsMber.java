@@ -17,6 +17,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.ToString;
 
 @Entity
@@ -25,7 +26,10 @@ import lombok.ToString;
 @DynamicUpdate
 
 @Getter
-//@Setter
+
+// 임시
+@Setter
+
 @ToString
 
 @NoArgsConstructor
