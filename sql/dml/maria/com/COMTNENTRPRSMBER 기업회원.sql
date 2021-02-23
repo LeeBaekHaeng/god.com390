@@ -57,3 +57,19 @@ SELECT ENTRPRS_MBER_ID AS id FROM COMTNENTRPRSMBER
 -- AND applcnt_email_adres = 'egovframesupport@gmail.com'
 -- AND entrprs_mber_sttus = 'P'
 ;
+
+			select
+mber_id,
+mber_nm,
+mber_email_adres,
+password_hint,
+password_cnsr,
+			password AS password
+			  FROM COMTNGNRLMBER
+-- 			 WHERE mber_id = #{id}
+-- 			   AND mber_nm = #{name}
+-- 			   AND mber_email_adres = #{email}
+-- 			   AND password_hint = #{passwordHint}
+-- 			   AND password_cnsr = #{passwordCnsr}
+-- 			   AND mber_sttus = 'P'
+;
