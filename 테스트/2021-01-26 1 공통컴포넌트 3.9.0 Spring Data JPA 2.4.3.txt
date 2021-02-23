@@ -79,7 +79,9 @@ EntrprsMberRepository CrudRepository save
 entrprsmberservice
 EntrprsMberService
 
-*기업회원 저장 Service
+기업회원 저장 Service
+
+*기업회원 페이징 Service
 
 ---
 
