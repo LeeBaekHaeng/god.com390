@@ -145,8 +145,10 @@ LoginDAO '아이디를 찾는다.' 테스트
 A4_searchId
 
 LoginDAO '비밀번호를 찾는다.' 테스트
-*A5_searchPassword
+A5_searchPassword
 
-A6_updatePassword
+LoginDAO '변경된 비밀번호를 저장한다.' 테스트
+*A6_updatePassword
+
 A7_selectLoginIncorrect
 A8_updateLoginIncorrect
