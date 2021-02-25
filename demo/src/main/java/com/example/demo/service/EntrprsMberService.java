@@ -9,6 +9,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.domain.EntrprsMberSpecs;
 import com.example.demo.dto.EntrprsMberDto;
 import com.example.demo.entity.EntrprsMber;
 import com.example.demo.repository.EntrprsMberRepository;
@@ -29,7 +30,8 @@ public class EntrprsMberService {
 		return repository.save(dto.of()).of();
 	}
 
-	public Page<EntrprsMberDto> findAll(Specification<EntrprsMber> spec, Pageable pageable) {
+	public Page<EntrprsMberDto> findAll(EntrprsMberDto dto, Pageable pageable) {
+		Specification<EntrprsMber> spec = EntrprsMberSpecs.where(dto.of());
 		Page<EntrprsMber> page = repository.findAll(spec, pageable);
 		List<EntrprsMberDto> content = page.get().map(mapper -> mapper.of()).collect(Collectors.toList());
 		return new PageImpl<>(content, pageable, page.getTotalElements());

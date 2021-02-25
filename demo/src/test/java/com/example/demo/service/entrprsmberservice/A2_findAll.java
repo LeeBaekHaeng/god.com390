@@ -8,7 +8,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
-import org.springframework.data.jpa.domain.Specification;
 
 import com.example.demo.dto.EntrprsMberDto;
 import com.example.demo.entity.EntrprsMber;
@@ -61,23 +60,14 @@ class A2_findAll {
 		log.debug("test");
 
 		EntrprsMberDto dto = new EntrprsMberDto();
-//		dto.setMberId("1");
-//		dto.setPassword("test 비밀번호1");
-
-		EntrprsMber entity = dto.of();
-
-		log.debug("entity: {}", entity);
-
-//		Specification<EntrprsMber> spec = EntrprsMberSpecs.equalMberId(entity)
-//				.and(EntrprsMberSpecs.equalPassword(entity));
-//		Specification<EntrprsMber> spec = EntrprsMberSpecs.where(entity);
-		Specification<EntrprsMber> spec = null;
+//		dto.setEntrprsMberId("00000000000000000099");
+		dto.setCmpnyNm("test 회사명9");
 
 		Sort sort = Sort.by("entrprsMberId").descending();
 		sort = sort.and(Sort.by("sbscrbDe").descending());
 		Pageable pageable = PageRequest.of(0, 10, sort);
 
-		Page<EntrprsMberDto> page = service.findAll(spec, pageable);
+		Page<EntrprsMberDto> page = service.findAll(dto, pageable);
 
 		log.debug("getTotalElements: {}", page.getTotalElements());
 
