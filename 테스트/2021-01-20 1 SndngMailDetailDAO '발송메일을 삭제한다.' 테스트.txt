@@ -151,6 +151,7 @@ LoginDAO '변경된 비밀번호를 저장한다.' 테스트
 A6_updatePassword
 
 LoginDAO '로그인인증제한 내역을 조회한다.' 테스트
-*A7_selectLoginIncorrect
+A7_selectLoginIncorrect
 
-A8_updateLoginIncorrect
+LoginDAO '로그인인증제한 내역을 업데이트 한다.' 테스트
+*A8_updateLoginIncorrect

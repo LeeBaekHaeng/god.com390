@@ -73,3 +73,13 @@ password_cnsr,
 -- 			   AND password_cnsr = #{passwordCnsr}
 -- 			   AND mber_sttus = 'P'
 ;
+
+select
+	A.LOCK_AT,
+	A.LOCK_CNT,
+	A.LOCK_LAST_PNTTM,
+	A.MBER_ID,
+	A.*
+from
+	COMTNGNRLMBER A
+;
