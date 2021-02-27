@@ -37,4 +37,8 @@ public class EntrprsMberService {
 		return new PageImpl<>(content, pageable, page.getTotalElements());
 	}
 
+	public EntrprsMberDto findById(String id) {
+		return repository.findById(id).orElseGet(EntrprsMber::new).of();
+	}
+
 }
