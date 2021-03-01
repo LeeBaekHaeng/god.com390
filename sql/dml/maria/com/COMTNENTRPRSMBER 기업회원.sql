@@ -40,7 +40,9 @@ SELECT mber_nm, mber_email_adres, mber_id
 FROM COMTNGNRLMBER
 ;
 
-SELECT cmpny_nm, applcnt_email_adres, ENTRPRS_MBER_ID
+select
+-- cmpny_nm, applcnt_email_adres, ENTRPRS_MBER_ID
+	*
 FROM COMTNENTRPRSMBER
 ;
 

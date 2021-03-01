@@ -48,6 +48,38 @@ public class A8_updateLoginIncorrect extends GodTestAbstract {
 
 	}
 
+	@Test
+	public void test2() {
+		egovLogger.debug("test2");
+
+		Map<String, Object> map = new HashMap<>();
+		map.put("USER_SE", "ENT");
+		map.put("updateAt", "E");
+//		map.put("updateAt", "L");
+//		map.put("updateAt", "C");
+		map.put("id", "ENTERPRISE");
+
+		updateLoginIncorrect(map);
+
+		LoginVO vo = new LoginVO();
+		vo.setUserSe((String) map.get("USER_SE"));
+		vo.setId((String) map.get("id"));
+		Map<?, ?> result = null;
+		try {
+			result = dao.selectLoginIncorrect(vo);
+		} catch (Exception e) {
+			egovLogger.error(e.getMessage());
+		}
+		egovLogger.debug("result: {}", result);
+		egovLogger.debug("userId: {}", result.get("userId"));
+		egovLogger.debug("userPw: {}", result.get("userPw"));
+		egovLogger.debug("userNm: {}", result.get("userNm"));
+		egovLogger.debug("uniqId: {}", result.get("uniqId"));
+		egovLogger.debug("lockAt: {}", result.get("lockAt"));
+		egovLogger.debug("lockCnt: {}", result.get("lockCnt"));
+
+	}
+
 	public void updateLoginIncorrect(Map<?, ?> map) {
 		try {
 			dao.updateLoginIncorrect(map);
