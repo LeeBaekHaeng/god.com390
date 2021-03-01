@@ -84,7 +84,9 @@ EntrprsMberService
 기업회원 페이징 Service
 EntrprsMber
 
-*기업회원 상세 Service
+기업회원 상세 Service
+
+*기업회원 수정 Service
 
 ---
 

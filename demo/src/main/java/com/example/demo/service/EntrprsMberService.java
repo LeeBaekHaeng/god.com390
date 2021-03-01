@@ -8,6 +8,7 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.example.demo.domain.EntrprsMberSpecs;
 import com.example.demo.dto.EntrprsMberDto;
@@ -39,6 +40,29 @@ public class EntrprsMberService {
 
 	public EntrprsMberDto findById(String id) {
 		return repository.findById(id).orElseGet(EntrprsMber::new).of();
+	}
+
+	@Transactional
+	public EntrprsMberDto update(EntrprsMberDto dto) {
+		log.debug("dto: {}", dto);
+		log.debug("getEntrprsMberId: {}", dto.getEntrprsMberId());
+		log.debug("getEntrprsSeCode: {}", dto.getEntrprsSeCode());
+
+		repository.flush();
+
+		EntrprsMber find = repository.findById(dto.getEntrprsMberId()).orElseGet(EntrprsMber::new);
+
+		repository.flush();
+
+		find.setEntrprsSeCode(dto.getEntrprsSeCode());
+
+		repository.flush();
+
+		log.debug("find: {}", find);
+		log.debug("getEntrprsMberId: {}", find.getEntrprsMberId());
+		log.debug("getEntrprsSeCode: {}", find.getEntrprsSeCode());
+
+		return find.of();
 	}
 
 }
