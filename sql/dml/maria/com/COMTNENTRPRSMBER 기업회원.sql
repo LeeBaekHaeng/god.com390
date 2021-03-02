@@ -46,7 +46,9 @@ select
 FROM COMTNENTRPRSMBER
 ;
 
-SELECT user_nm, email_adres, emplyr_id
+select
+-- user_nm, email_adres, emplyr_id
+	*
 FROM COMTNEMPLYRINFO
 ;
 
