@@ -65,4 +65,8 @@ public class EntrprsMberService {
 		return find.of();
 	}
 
+	public void deleteById(String id) {
+		repository.deleteById(id);
+	}
+
 }

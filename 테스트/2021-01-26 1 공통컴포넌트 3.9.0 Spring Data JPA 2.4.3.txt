@@ -86,7 +86,9 @@ EntrprsMber
 
 기업회원 상세 Service
 
-*기업회원 수정 Service
+기업회원 수정 Service
+
+*기업회원 삭제 Service
 
 ---
 
