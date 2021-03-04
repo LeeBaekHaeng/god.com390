@@ -35,7 +35,8 @@ public class FileUtilsTest {
 
 			egovLogger.debug("name: {}", name);
 
-			boolean endsWith = name.endsWith("Service.java");
+//			boolean endsWith = name.endsWith("Service.java");
+			boolean endsWith = name.endsWith("ServiceImpl.java");
 
 			if (endsWith) {
 				sb.append(name);
