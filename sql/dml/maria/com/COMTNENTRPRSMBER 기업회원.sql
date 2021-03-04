@@ -30,7 +30,7 @@ select * from comvnusermaster;
 		     , orgnzt_id AS orgnztId
 		     , esntl_id AS uniqId
 , CRTFC_DN_VALUE
-		  FROM COMTNEMPLYRINFO
+		  FROM com.COMTNEMPLYRINFO
 -- 		 WHERE CRTFC_DN_VALUE = #{dn}
 		
 -- 	</select>

@@ -88,10 +88,12 @@ EntrprsMber
 
 기업회원 수정 Service
 
-*기업회원 삭제 Service
+기업회원 삭제 Service
 
 ---
 
 업무사용자	COMTNEMPLYRINFO
+
+EmplyrInfo
 
 ---
