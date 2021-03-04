@@ -86,11 +86,11 @@ public class A8_updateLoginIncorrect extends GodTestAbstract {
 
 		Map<String, Object> map = new HashMap<>();
 		map.put("USER_SE", "USR");
-		map.put("updateAt", "E");
-//		map.put("updateAt", "L");
+//		map.put("updateAt", "E");
+		map.put("updateAt", "L");
 //		map.put("updateAt", "C");
-		map.put("id", "TEST1");
-//		map.put("id", "webmaster");
+//		map.put("id", "TEST1");
+		map.put("id", "webmaster");
 
 		updateLoginIncorrect(map);
 
