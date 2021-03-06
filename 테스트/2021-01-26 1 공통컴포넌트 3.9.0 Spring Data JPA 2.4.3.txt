@@ -96,4 +96,8 @@ EntrprsMber
 
 EmplyrInfo
 
+emplyrinforepository
+
+업무사용자 Repository save
+
 ---
