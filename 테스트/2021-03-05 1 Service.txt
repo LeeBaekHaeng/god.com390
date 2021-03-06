@@ -1,12 +1,16 @@
 EgovCmmUseService.java
 EgovFileMngService.java
 
-*EgovUserDetailsService.java
+EgovUserDetailsService.java
 A1_getAuthenticatedUser
 A2_getAuthorities
 A3_isAuthenticated
 
 EgovSndngMailDetailService.java
+A1_selectSndngMail
+A2_deleteSndngMail
+A3_deleteAtchmnFile
+
 EgovSndngMailDtlsService.java
 EgovSndngMailRegistService.java
 EgovSndngMailService.java
@@ -22,13 +26,21 @@ EgoDummyUserDetailsServiceImpl.java
 EgovCmmUseServiceImpl.java
 EgovFileMngServiceImpl.java
 
-*EgovUserDetailsSessionServiceImpl.java
+EgovUserDetailsSessionServiceImpl.java
 egovuserdetailssessionserviceimpl
 A1_getAuthenticatedUser
 A2_isAuthenticated
 A3_getAuthorities
 
 EgovSndngMailDetailServiceImpl.java
+egovsndngmaildetailserviceimpl
+
+'발송메일을 상세 조회한다.' Service 테스트
+A1_selectSndngMail
+
+A2_deleteSndngMail
+A3_deleteAtchmnFile
+
 EgovSndngMailDtlsServiceImpl.java
 EgovSndngMailRegistServiceImpl.java
 EgovSndngMailServiceImpl.java

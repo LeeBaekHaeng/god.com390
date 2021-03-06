@@ -1,0 +1,4 @@
+SELECT
+	A.*
+FROM COMTHEMAILDSPTCHMANAGE /* 메일발신관리 */ A
+;
