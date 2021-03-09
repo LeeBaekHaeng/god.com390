@@ -1,5 +1,6 @@
 package com.example.demo.repository.emplyrinforepository;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,10 +20,17 @@ import lombok.extern.slf4j.Slf4j;
 class A2_findAll {
 
 	private final EmplyrInfoRepository repository;
+	private final EmplyrInfoTestData emplyrInfoTestData;
 
 	@Autowired
-	public A2_findAll(EmplyrInfoRepository repository) {
+	public A2_findAll(EmplyrInfoRepository repository, EmplyrInfoTestData emplyrInfoTestData) {
 		this.repository = repository;
+		this.emplyrInfoTestData = emplyrInfoTestData;
+	}
+
+	@BeforeEach
+	void setUp() throws Exception {
+		emplyrInfoTestData.save();
 	}
 
 	@Test

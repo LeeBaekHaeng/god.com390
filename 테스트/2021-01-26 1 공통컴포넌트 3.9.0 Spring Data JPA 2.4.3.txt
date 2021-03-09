@@ -102,4 +102,6 @@ emplyrinforepository
 
 업무사용자 Repository findAll
 
+업무사용자 테스트 데이터
+
 ---
