@@ -41,6 +41,7 @@ A1_selectSndngMail
 '발송메일을 삭제한다.' Service 테스트
 A2_deleteSndngMail
 
+'첨부파일을 삭제한다.' Service 테스트
 A3_deleteAtchmnFile
 
 EgovSndngMailDtlsServiceImpl.java
