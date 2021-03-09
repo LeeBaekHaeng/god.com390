@@ -45,6 +45,14 @@ A2_deleteSndngMail
 A3_deleteAtchmnFile
 
 EgovSndngMailDtlsServiceImpl.java
+egovsndngmaildtlsserviceimpl
+
+'발송메일 목록을 조회한다.' Service 테스트
+A1_selectSndngMailList
+
+A2_selectSndngMailListTotCnt
+A3_deleteSndngMailList
+
 EgovSndngMailRegistServiceImpl.java
 EgovSndngMailServiceImpl.java
 EgovAuthorManageServiceImpl.java
