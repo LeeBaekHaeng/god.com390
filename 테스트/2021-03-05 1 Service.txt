@@ -50,7 +50,9 @@ egovsndngmaildtlsserviceimpl
 '발송메일 목록을 조회한다.' Service 테스트
 A1_selectSndngMailList
 
+'발송메일 총건수를 조회한다.' Service 테스트
 A2_selectSndngMailListTotCnt
+
 A3_deleteSndngMailList
 
 EgovSndngMailRegistServiceImpl.java
