@@ -10,6 +10,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 
+import com.example.demo.domain.EmplyrInfoSpecs;
 import com.example.demo.entity.EmplyrInfo;
 import com.example.demo.repository.EmplyrInfoRepository;
 
@@ -37,11 +38,15 @@ class A2_findAll {
 	void test() {
 		log.debug("test");
 
-		EmplyrInfo entity = EmplyrInfo.builder().build();
+		// @formatter:off
+		EmplyrInfo entity = EmplyrInfo.builder()
+				.userNm("test")
+				.build();
+		// @formatter:on
 
 		log.debug("entity: {}", entity);
 
-		Specification<EmplyrInfo> spec = null;
+		Specification<EmplyrInfo> spec = EmplyrInfoSpecs.where(entity);
 
 		Sort sort = Sort.by("emplyrId").descending();
 		Pageable pageable = PageRequest.of(0, 10, sort);

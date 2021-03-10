@@ -104,4 +104,6 @@ emplyrinforepository
 
 업무사용자 테스트 데이터
 
+업무사용자 Repository Specification
+
 ---
