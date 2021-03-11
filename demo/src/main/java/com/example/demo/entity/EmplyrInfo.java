@@ -29,7 +29,8 @@ import lombok.ToString;
 
 @ToString(of = { "emplyrId" })
 
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor
+//@NoArgsConstructor(access = AccessLevel.PROTECTED)
 //@RequiredArgsConstructor
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
 

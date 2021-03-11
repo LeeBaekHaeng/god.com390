@@ -106,4 +106,6 @@ emplyrinforepository
 
 업무사용자 Repository Specification
 
+업무사용자 Repository findById orElseGet
+
 ---
