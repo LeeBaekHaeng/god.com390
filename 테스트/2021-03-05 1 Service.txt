@@ -53,7 +53,10 @@ A1_selectSndngMailList
 '발송메일 총건수를 조회한다.' Service 테스트
 A2_selectSndngMailListTotCnt
 
+'발송메일을 삭제한다.' Service 테스트
 A3_deleteSndngMailList
+java.io.FileNotFoundException: E:\EGOVFRAME390\git\god.com390\god.test\target\test-classes\egovframework\egovProps\globals.properties (지정된 경로를 찾을 수 없습니다)
+Globals.MAIL_REQUEST_PATH=/E:/EGOVFRAME390/git/god.com390/god.test/target/test-classes/egovframework/egovProps\mail/request/
 
 EgovSndngMailRegistServiceImpl.java
 EgovSndngMailServiceImpl.java
