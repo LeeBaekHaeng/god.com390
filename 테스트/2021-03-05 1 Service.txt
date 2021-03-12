@@ -59,6 +59,14 @@ java.io.FileNotFoundException: E:\EGOVFRAME390\git\god.com390\god.test\target\te
 Globals.MAIL_REQUEST_PATH=/E:/EGOVFRAME390/git/god.com390/god.test/target/test-classes/egovframework/egovProps\mail/request/
 
 EgovSndngMailRegistServiceImpl.java
+egovsndngmailregistserviceimpl
+
+'발송할 메일을 등록한다' Service 테스트
+A1_insertSndngMail
+
+A2_trnsmitXmlData
+A3_recptnXmlData
+
 EgovSndngMailServiceImpl.java
 EgovAuthorManageServiceImpl.java
 EgovAuthorRoleManageServiceImpl.java
