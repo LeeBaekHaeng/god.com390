@@ -108,4 +108,6 @@ emplyrinforepository
 
 업무사용자 Repository findById orElseGet
 
+업무사용자 Repository findById 수정
+
 ---

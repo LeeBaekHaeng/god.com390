@@ -29,8 +29,8 @@ import lombok.ToString;
 
 @ToString(of = { "emplyrId" })
 
-@NoArgsConstructor
-//@NoArgsConstructor(access = AccessLevel.PROTECTED)
+//@NoArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 //@RequiredArgsConstructor
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
 
@@ -125,5 +125,15 @@ public class EmplyrInfo {
 	private Integer lockCnt;
 
 	private LocalDateTime lockLastPnttm;
+
+	public static EmplyrInfo empty() {
+		return new EmplyrInfo();
+//		return EmplyrInfo.builder().areaNo("0000").build();
+	}
+
+	public void update(String areaNo, String userNm) {
+		this.areaNo = areaNo;
+		this.userNm = userNm;
+	}
 
 }
