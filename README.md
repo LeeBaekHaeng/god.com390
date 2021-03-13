@@ -1,7 +1,7 @@
 # god.com390
 
 ## GitHub
-- [잔디심기 커밋 목록](https://github.com/LeeBaekHaeng/god.com390/commits/main){:target="_blank"}
+- [잔디심기 커밋 목록](https://github.com/LeeBaekHaeng/god.com390/commits/main)
 - [LeeBaekHaeng GitHub 홈](https://github.com/LeeBaekHaeng)
 
 ## Spring Data JPA 연습
