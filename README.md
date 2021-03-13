@@ -5,16 +5,17 @@
 - [LeeBaekHaeng GitHub 홈](https://github.com/LeeBaekHaeng)
 
 ## Spring Data JPA 연습
-1. [pom.xml](https://github.com/LeeBaekHaeng/god.com390/blob/main/demo/pom.xml)
-2. [application.properties](https://github.com/LeeBaekHaeng/god.com390/blob/main/demo/src/main/resources/application.properties)
-3. [DemoApplication.java](https://github.com/LeeBaekHaeng/god.com390/blob/main/demo/src/main/java/com/example/demo/DemoApplication.java)
-4. [EmplyrInfo.java @Entity](https://github.com/LeeBaekHaeng/god.com390/blob/main/demo/src/main/java/com/example/demo/entity/EmplyrInfo.java)
-5. [EmplyrInfoRepository.java](https://github.com/LeeBaekHaeng/god.com390/blob/main/demo/src/main/java/com/example/demo/repository/EmplyrInfoRepository.java)
-6. [EmplyrInfoTestData.java 테스트 데이터](https://github.com/LeeBaekHaeng/god.com390/blob/main/demo/src/test/java/com/example/demo/repository/emplyrinforepository/EmplyrInfoTestData.java)
-7. [A1_save.java 저장 테스트](https://github.com/LeeBaekHaeng/god.com390/blob/main/demo/src/test/java/com/example/demo/repository/emplyrinforepository/A1_save.java)
-8. [A2_findAll.java 페이징/정렬/검색 테스트](https://github.com/LeeBaekHaeng/god.com390/blob/main/demo/src/test/java/com/example/demo/repository/emplyrinforepository/A2_findAll.java)
-9. [A3_findById.java 상세조회 테스트](https://github.com/LeeBaekHaeng/god.com390/blob/main/demo/src/test/java/com/example/demo/repository/emplyrinforepository/A3_findById.java)
-10. [A4_update.java 수정 테스트(변경감지)](https://github.com/LeeBaekHaeng/god.com390/blob/main/demo/src/test/java/com/example/demo/repository/emplyrinforepository/A4_update.java)
+- [pom.xml](https://github.com/LeeBaekHaeng/god.com390/blob/main/demo/pom.xml)
+- [application.properties](https://github.com/LeeBaekHaeng/god.com390/blob/main/demo/src/main/resources/application.properties)
+- [DemoApplication.java](https://github.com/LeeBaekHaeng/god.com390/blob/main/demo/src/main/java/com/example/demo/DemoApplication.java)
+- [EmplyrInfo.java @Entity](https://github.com/LeeBaekHaeng/god.com390/blob/main/demo/src/main/java/com/example/demo/entity/EmplyrInfo.java)
+- [EmplyrInfoSpecs.java where](https://github.com/LeeBaekHaeng/god.com390/blob/main/demo/src/main/java/com/example/demo/domain/EmplyrInfoSpecs.java)
+- [EmplyrInfoRepository.java](https://github.com/LeeBaekHaeng/god.com390/blob/main/demo/src/main/java/com/example/demo/repository/EmplyrInfoRepository.java)
+- [EmplyrInfoTestData.java 테스트 데이터](https://github.com/LeeBaekHaeng/god.com390/blob/main/demo/src/test/java/com/example/demo/repository/emplyrinforepository/EmplyrInfoTestData.java)
+- [A1_save.java 저장 테스트](https://github.com/LeeBaekHaeng/god.com390/blob/main/demo/src/test/java/com/example/demo/repository/emplyrinforepository/A1_save.java)
+- [A2_findAll.java 페이징/정렬/검색 테스트](https://github.com/LeeBaekHaeng/god.com390/blob/main/demo/src/test/java/com/example/demo/repository/emplyrinforepository/A2_findAll.java)
+- [A3_findById.java 상세조회 테스트](https://github.com/LeeBaekHaeng/god.com390/blob/main/demo/src/test/java/com/example/demo/repository/emplyrinforepository/A3_findById.java)
+- [A4_update.java 수정 테스트(변경감지)](https://github.com/LeeBaekHaeng/god.com390/blob/main/demo/src/test/java/com/example/demo/repository/emplyrinforepository/A4_update.java)
 
 ## 유튜브
 - [CRUD 프로그램 자동 생성 기능 3.9.0 연습](https://www.youtube.com/watch?v=8vMMMY0oz4M&list=PL6pSCmAEuNPH1PelbAooiJ6ORCGEamKMq)
