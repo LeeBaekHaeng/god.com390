@@ -10,6 +10,9 @@ import javax.persistence.Table;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
+import com.example.demo.dto.EmplyrInfoDto;
+import com.example.demo.dto.EmplyrInfoMapper;
+
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -32,7 +35,8 @@ import lombok.ToString;
 //@NoArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 //@RequiredArgsConstructor
-@AllArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
+//@AllArgsConstructor(access = AccessLevel.PROTECTED)
 
 @Builder
 public class EmplyrInfo {
@@ -134,6 +138,10 @@ public class EmplyrInfo {
 	public void update(String areaNo, String userNm) {
 		this.areaNo = areaNo;
 		this.userNm = userNm;
+	}
+
+	public EmplyrInfoDto of() {
+		return EmplyrInfoMapper.INSTANCE.entityToDto(this);
 	}
 
 }
