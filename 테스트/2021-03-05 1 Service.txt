@@ -67,7 +67,9 @@ A1_insertSndngMail
 '발송할 메일을 XML파일로 만들어 저장한다.' Service 테스트
 A2_trnsmitXmlData
 
+'발송메일 발송결과 XML파일을 읽어 발송결과코드에 수정한다.' Service 테스트
 A3_recptnXmlData
+/E:/EGOVFRAME390/git/god.com390/god.test/target/test-classes/egovframework/egovProps\mail/request/MAILMSG_000000000073.xml
 
 EgovSndngMailServiceImpl.java
 EgovAuthorManageServiceImpl.java
