@@ -110,4 +110,6 @@ emplyrinforepository
 
 업무사용자 Repository findById 수정
 
+업무사용자 Repository deleteById
+
 ---
