@@ -72,6 +72,10 @@ A3_recptnXmlData
 /E:/EGOVFRAME390/git/god.com390/god.test/target/test-classes/egovframework/egovProps\mail/request/MAILMSG_000000000073.xml
 
 EgovSndngMailServiceImpl.java
+egovsndngmailserviceimpl
+'메일을 발송한다' Service 테스트
+A1_sndngMail
+
 EgovAuthorManageServiceImpl.java
 EgovAuthorRoleManageServiceImpl.java
 EgovUserDetailsSecurityServiceImpl.java
