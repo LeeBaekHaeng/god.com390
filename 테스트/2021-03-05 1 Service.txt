@@ -77,6 +77,18 @@ egovsndngmailserviceimpl
 A1_sndngMail
 
 EgovAuthorManageServiceImpl.java
+egovauthormanageserviceimpl
+
+'모든 권한목록을 조회한다.' Service 테스트
+A1_selectAuthorAllList
+
+A2_deleteAuthor
+A3_insertAuthor
+A4_selectAuthor
+A5_selectAuthorList
+A6_updateAuthor
+A7_selectAuthorListTotCnt
+
 EgovAuthorRoleManageServiceImpl.java
 EgovUserDetailsSecurityServiceImpl.java
 EgovLoginPolicyServiceImpl.java
