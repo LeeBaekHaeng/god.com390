@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import com.example.demo.dto.EmplyrInfoDto;
-import com.example.demo.service.EmplyrInforService;
+import com.example.demo.service.EmplyrInfoService;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -14,8 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 class A1_save {
 
 	@Autowired
-	EmplyrInforService service;
-//	EmplyrInfoService
+	EmplyrInfoService service;
 
 	@Test
 	void test() {

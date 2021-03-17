@@ -19,7 +19,8 @@ public class EmplyrInfoSpecs {
 
 	public static Specification<EmplyrInfo> equalOrgnztId(EmplyrInfo entity) {
 		return (root, query, criteriaBuilder) -> {
-			if (StringUtils.hasText(entity.getOrgnztId())) {
+//			if (StringUtils.hasText(entity.getOrgnztId())) {
+			if (entity.getOrgnztId() != null) {
 				return criteriaBuilder.equal(root.get("orgnztId"), entity.getOrgnztId());
 			} else {
 				return null;

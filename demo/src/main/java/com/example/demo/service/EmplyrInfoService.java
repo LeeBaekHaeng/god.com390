@@ -1,7 +1,15 @@
 package com.example.demo.service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.domain.EmplyrInfoSpecs;
 import com.example.demo.dto.EmplyrInfoDto;
 import com.example.demo.entity.EmplyrInfo;
 import com.example.demo.repository.EmplyrInfoRepository;
@@ -13,7 +21,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @RequiredArgsConstructor
 @Slf4j
-public class EmplyrInforService {
+public class EmplyrInfoService {
 
 	private final EmplyrInfoRepository repository;
 
@@ -25,13 +33,13 @@ public class EmplyrInforService {
 		return saveDto;
 	}
 
-//	public Page<EmplyrInfoDto> findAll(EmplyrInfoDto dto, Pageable pageable) {
-//		Specification<EmplyrInfo> spec = EmplyrInfoSpecs.where(dto.of());
-//		Page<EmplyrInfo> page = repository.findAll(spec, pageable);
-//		List<EmplyrInfoDto> content = page.get().map(mapper -> mapper.of()).collect(Collectors.toList());
-//		return new PageImpl<>(content, pageable, page.getTotalElements());
-//	}
-//
+	public Page<EmplyrInfoDto> findAll(EmplyrInfoDto dto, Pageable pageable) {
+		Specification<EmplyrInfo> spec = EmplyrInfoSpecs.where(dto.of());
+		Page<EmplyrInfo> page = repository.findAll(spec, pageable);
+		List<EmplyrInfoDto> content = page.get().map(mapper -> mapper.of()).collect(Collectors.toList());
+		return new PageImpl<>(content, pageable, page.getTotalElements());
+	}
+
 //	public EmplyrInfoDto findById(String id) {
 //		return repository.findById(id).orElseGet(EmplyrInfo::new).of();
 //	}
