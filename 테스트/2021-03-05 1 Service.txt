@@ -82,7 +82,9 @@ egovauthormanageserviceimpl
 '모든 권한목록을 조회한다.' Service 테스트
 A1_selectAuthorAllList
 
+'시스템 사용자중 불필요한 시스템권한정보를 화면에 조회하여 데이터베이스에서 삭제' Service 테스트
 A2_deleteAuthor
+
 A3_insertAuthor
 A4_selectAuthor
 A5_selectAuthorList

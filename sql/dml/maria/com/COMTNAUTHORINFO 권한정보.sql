@@ -1,0 +1,4 @@
+SELECT
+	A.*
+FROM COMTNAUTHORINFO A /* 권한정보 */
+;
