@@ -11,7 +11,7 @@ import lombok.ToString;
 @Getter
 @Setter
 
-@ToString(of = { "emplyrId" })
+@ToString(of = { "emplyrId", "orgnztId" })
 
 public class EmplyrInfoDto {
 

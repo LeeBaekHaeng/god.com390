@@ -115,6 +115,9 @@ emplyrinforepository
 업무사용자 Service save
 emplyrinforservice
 
-업무사용자 Service findAll(spec, pageable)
+업무사용자 Service findAll(spec, 
+pageable)
+
+업무사용자 Service findById.orElseGet
 
 ---

@@ -8,6 +8,7 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.example.demo.domain.EmplyrInfoSpecs;
 import com.example.demo.dto.EmplyrInfoDto;
@@ -18,6 +19,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 @Service
+@Transactional(readOnly = true)
 
 @RequiredArgsConstructor
 @Slf4j
@@ -25,6 +27,7 @@ public class EmplyrInfoService {
 
 	private final EmplyrInfoRepository repository;
 
+	@Transactional
 	public EmplyrInfoDto save(EmplyrInfoDto dto) {
 		log.debug("dto: {}", dto);
 		EmplyrInfo entity = dto.of();
@@ -40,10 +43,10 @@ public class EmplyrInfoService {
 		return new PageImpl<>(content, pageable, page.getTotalElements());
 	}
 
-//	public EmplyrInfoDto findById(String id) {
-//		return repository.findById(id).orElseGet(EmplyrInfo::new).of();
-//	}
-//
+	public EmplyrInfoDto findById(String id) {
+		return repository.findById(id).orElseGet(EmplyrInfo::empty).of();
+	}
+
 //	@Transactional
 //	public EmplyrInfoDto update(EmplyrInfoDto dto) {
 //		log.debug("dto: {}", dto);
