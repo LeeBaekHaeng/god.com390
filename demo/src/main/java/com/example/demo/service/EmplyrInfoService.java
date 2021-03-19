@@ -47,29 +47,14 @@ public class EmplyrInfoService {
 		return repository.findById(id).orElseGet(EmplyrInfo::empty).of();
 	}
 
-//	@Transactional
-//	public EmplyrInfoDto update(EmplyrInfoDto dto) {
-//		log.debug("dto: {}", dto);
-//		log.debug("getEmplyrInfoId: {}", dto.getEmplyrInfoId());
-//		log.debug("getEntrprsSeCode: {}", dto.getEntrprsSeCode());
-//
-//		repository.flush();
-//
-//		EmplyrInfo find = repository.findById(dto.getEmplyrInfoId()).orElseGet(EmplyrInfo::new);
-//
-//		repository.flush();
-//
-//		find.setEntrprsSeCode(dto.getEntrprsSeCode());
-//
-//		repository.flush();
-//
-//		log.debug("find: {}", find);
-//		log.debug("getEmplyrInfoId: {}", find.getEmplyrInfoId());
-//		log.debug("getEntrprsSeCode: {}", find.getEntrprsSeCode());
-//
-//		return find.of();
-//	}
-//
+	@Transactional
+	public EmplyrInfoDto update(EmplyrInfoDto dto) {
+		log.debug("dto: {}", dto);
+		EmplyrInfo find = repository.findById(dto.getEmplyrId()).orElseGet(EmplyrInfo::empty);
+		find.update(dto.getUserNm());
+		return find.of();
+	}
+
 //	public void deleteById(String id) {
 //		repository.deleteById(id);
 //	}

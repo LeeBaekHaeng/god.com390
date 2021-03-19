@@ -140,6 +140,10 @@ public class EmplyrInfo {
 		this.userNm = userNm;
 	}
 
+	public void update(String userNm) {
+		this.userNm = userNm;
+	}
+
 	public EmplyrInfoDto of() {
 		return EmplyrInfoMapper.INSTANCE.entityToDto(this);
 	}
