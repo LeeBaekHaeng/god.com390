@@ -1,4 +1,4 @@
 SELECT
 	A.*
-FROM COMTNAUTHORINFO A /* 권한정보 */
+FROM com.COMTNAUTHORINFO A /* 권한정보 */
 ;
