@@ -88,7 +88,9 @@ A2_deleteAuthor
 '사용자의 시스테접근권한를 화면에서 입력하여 입력항목의 정합성을 체크하고 데이터베이스에 저장' Service 테스트
 A3_insertAuthor
 
+'개별사용자에게 할당된 권한 조회' Service 테스트
 A4_selectAuthor
+
 A5_selectAuthorList
 A6_updateAuthor
 A7_selectAuthorListTotCnt
