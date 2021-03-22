@@ -91,7 +91,9 @@ A3_insertAuthor
 '개별사용자에게 할당된 권한 조회' Service 테스트
 A4_selectAuthor
 
+'개별사용자에게 할당된 권한리스트 조회' Service 테스트
 A5_selectAuthorList
+
 A6_updateAuthor
 A7_selectAuthorListTotCnt
 
