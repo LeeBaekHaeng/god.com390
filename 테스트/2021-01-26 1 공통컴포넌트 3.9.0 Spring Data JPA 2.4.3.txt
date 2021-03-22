@@ -122,4 +122,6 @@ pageable)
 
 업무사용자 Service 수정
 
+업무사용자 Service 삭제
+
 ---

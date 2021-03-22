@@ -55,8 +55,9 @@ public class EmplyrInfoService {
 		return find.of();
 	}
 
-//	public void deleteById(String id) {
-//		repository.deleteById(id);
-//	}
+	@Transactional
+	public void deleteById(String id) {
+		repository.deleteById(id);
+	}
 
 }
