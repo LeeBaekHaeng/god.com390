@@ -125,3 +125,22 @@ pageable)
 업무사용자 Service 삭제
 
 ---
+
+공통분류코드
+comtccmmnclcode
+com_tc_cmmn_cl_code
+cmmn_cl_code
+CmmnClCode
+cmmnClCode
+
+공통분류코드 Entity 생성
+
+---
+
+공통코드
+comtccmmncode
+
+공통상세코드
+comtccmmndetailcode
+
+---
