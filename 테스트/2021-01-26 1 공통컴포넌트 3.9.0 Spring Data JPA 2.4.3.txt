@@ -134,6 +134,8 @@ CmmnClCode
 cmmnClCode
 
 공통분류코드 Entity 생성
+공통분류코드 Repository 생성
+cmmnclcoderepository
 
 ---
 
