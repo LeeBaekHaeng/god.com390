@@ -2,6 +2,8 @@ package com.example.demo.repository.cmmnclcoderepository;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.time.LocalDateTime;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -23,9 +25,18 @@ class A1_save {
 		log.debug("test");
 
 		// given
+		LocalDateTime frstRegistPnttm = LocalDateTime.now();
+		String frstRegisterId = "test 최초등록자ID";
 // @formatter:off
 		CmmnClCode entity = CmmnClCode.builder()
 				.clCode("GOD")
+				.clCodeNm("test 분류코드명")
+				.clCodeDc("test 분류코드설명")
+				.useAt("Y")
+				.frstRegistPnttm(frstRegistPnttm)
+				.frstRegisterId(frstRegisterId)
+				.lastUpdtPnttm(frstRegistPnttm)
+				.lastUpdusrId(frstRegisterId)
 				.build();
 // @formatter:on
 

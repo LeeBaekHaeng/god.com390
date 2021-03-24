@@ -137,6 +137,8 @@ cmmnClCode
 공통분류코드 Repository 생성
 cmmnclcoderepository
 
+공통분류코드 Repository save
+
 ---
 
 공통코드

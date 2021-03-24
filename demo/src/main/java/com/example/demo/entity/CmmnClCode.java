@@ -25,7 +25,8 @@ import lombok.ToString;
 
 @Getter
 
-@ToString(of = { "clCode", "clCodeNm" })
+@ToString(of = { "clCode", "clCodeNm", "clCodeDc", "useAt", "frstRegistPnttm", "frstRegisterId", "lastUpdtPnttm",
+		"lastUpdusrId" })
 
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
