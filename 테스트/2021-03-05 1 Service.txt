@@ -100,7 +100,23 @@ A6_updateAuthor
 '목록조회 카운트를 반환한다' Service 테스트
 A7_selectAuthorListTotCnt
 
+---
+
 EgovAuthorRoleManageServiceImpl.java
+egovauthorrolemanageserviceimpl
+
+'권한 롤 관계정보를 조회' Service 테스트
+A1_selectAuthorRole
+Mapped Statements collection does not contain value for authorRoleManageDAO.selectAuthorRole
+
+A2_selectAuthorRoleList
+A3_insertAuthorRole
+A4_updateAuthorRole
+A5_deleteAuthorRole
+A6_selectAuthorRoleListTotCnt
+
+---
+
 EgovUserDetailsSecurityServiceImpl.java
 EgovLoginPolicyServiceImpl.java
 EgovLoginServiceImpl.java
