@@ -139,6 +139,8 @@ cmmnclcoderepository
 
 공통분류코드 Repository save
 
+공통분류코드 Repository findAll
+
 ---
 
 공통코드
