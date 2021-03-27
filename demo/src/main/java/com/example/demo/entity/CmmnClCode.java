@@ -57,4 +57,8 @@ public class CmmnClCode {
 	@Column(length = 20)
 	private String lastUpdusrId;
 
+	public static CmmnClCode empty() {
+		return new CmmnClCode();
+	}
+
 }

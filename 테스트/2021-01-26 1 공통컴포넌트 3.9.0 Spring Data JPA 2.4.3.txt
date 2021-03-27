@@ -141,6 +141,8 @@ cmmnclcoderepository
 
 공통분류코드 Repository findAll
 
+공통분류코드 Repository findById.orElseGet
+
 ---
 
 공통코드
