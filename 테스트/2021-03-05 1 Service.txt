@@ -112,7 +112,9 @@ Mapped Statements collection does not contain value for authorRoleManageDAO.sele
 '권한 롤 관계정보 목록 조회' Service 테스트
 A2_selectAuthorRoleList
 
+'권한 롤 관계정보를 화면에서 입력하여 입력항목의 정합성을 체크하고 데이터베이스에 저장' Service 테스트
 A3_insertAuthorRole
+
 A4_updateAuthorRole
 A5_deleteAuthorRole
 A6_selectAuthorRoleListTotCnt
