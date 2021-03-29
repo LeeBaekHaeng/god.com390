@@ -143,6 +143,8 @@ cmmnclcoderepository
 
 공통분류코드 Repository findById.orElseGet
 
+공통분류코드 Repository update 변경감지
+
 ---
 
 공통코드
