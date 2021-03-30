@@ -145,6 +145,8 @@ cmmnclcoderepository
 
 공통분류코드 Repository update 변경감지
 
+CmmnClCodeTestData 저장 안 됨
+
 ---
 
 공통코드
