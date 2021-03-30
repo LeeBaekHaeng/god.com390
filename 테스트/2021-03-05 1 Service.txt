@@ -115,7 +115,11 @@ A2_selectAuthorRoleList
 '권한 롤 관계정보를 화면에서 입력하여 입력항목의 정합성을 체크하고 데이터베이스에 저장' Service 테스트
 A3_insertAuthorRole
 
+'수정된 권한 롤 관계정보를 데이터베이스에 반영' Service 테스트
 A4_updateAuthorRole
+Mapped Statements collection does not contain value for authorRoleManageDAO.updateAuthorRole
+@Deprecated
+
 A5_deleteAuthorRole
 A6_selectAuthorRoleListTotCnt
 
