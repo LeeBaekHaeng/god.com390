@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.example.demo.entity.CmmnClCode;
 import com.example.demo.repository.CmmnClCodeRepository;
@@ -19,7 +18,7 @@ public class CmmnClCodeTestData {
 
 	private final CmmnClCodeRepository repository;
 
-	@Transactional
+//	@Transactional
 	public void saveAll() {
 		List<CmmnClCode> entities = new ArrayList<>();
 
@@ -27,9 +26,10 @@ public class CmmnClCodeTestData {
 		String frstRegisterId = "test 최초등록자ID";
 
 		for (int i = 1; i < 100; i++) {
+			String clCode = String.format("%02d", i);
 			// @formatter:off
 			CmmnClCode entity = CmmnClCode.builder()
-					.clCode("GOD")
+					.clCode("A" + clCode)
 					.clCodeNm("test 분류코드명" + i)
 					.clCodeDc("test 분류코드설명" + i)
 					.useAt("Y")

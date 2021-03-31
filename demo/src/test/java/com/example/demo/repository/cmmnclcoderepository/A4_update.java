@@ -28,7 +28,7 @@ class A4_update {
 	CmmnClCodeRepository repository;
 
 	@BeforeEach
-//	@Transactional
+	@Transactional
 	void setUp() throws Exception {
 		testData.saveAll();
 	}
@@ -39,7 +39,7 @@ class A4_update {
 		log.debug("test");
 
 		// given
-		String id = "99";
+		String id = "A99";
 
 		// when
 		CmmnClCode result = repository.findById(id).orElseGet(CmmnClCode::empty);

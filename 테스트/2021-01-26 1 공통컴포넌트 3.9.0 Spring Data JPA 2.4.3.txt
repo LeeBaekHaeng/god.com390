@@ -147,6 +147,8 @@ cmmnclcoderepository
 
 CmmnClCodeTestData 저장 안 됨
 
+CmmnClCodeTestData 저장은 됨
+
 ---
 
 공통코드
