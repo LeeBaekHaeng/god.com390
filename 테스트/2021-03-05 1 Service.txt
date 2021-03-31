@@ -120,7 +120,9 @@ A4_updateAuthorRole
 Mapped Statements collection does not contain value for authorRoleManageDAO.updateAuthorRole
 @Deprecated
 
+'권한 롤 관계정보를 화면에 조회하여 데이터베이스에서 삭제' Service 테스트
 A5_deleteAuthorRole
+
 A6_selectAuthorRoleListTotCnt
 
 ---
