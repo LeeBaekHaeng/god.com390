@@ -28,9 +28,10 @@ class A4_update {
 	CmmnClCodeRepository repository;
 
 	@BeforeEach
-	@Transactional
+//	@Transactional
 	void setUp() throws Exception {
 		testData.saveAll();
+//		repository.flush();
 	}
 
 	@Test
@@ -43,6 +44,7 @@ class A4_update {
 
 		// when
 		CmmnClCode result = repository.findById(id).orElseGet(CmmnClCode::empty);
+//		repository.flush();
 
 		log.debug("result: {}", result);
 		log.debug("getClCode: {}", result.getClCode());
@@ -54,6 +56,7 @@ class A4_update {
 		String lastUpdusrId = "test 사용자명99 update";
 		LocalDateTime lastUpdtPnttm = LocalDateTime.now();
 		result.update(clCodeNm, lastUpdusrId, lastUpdtPnttm);
+//		repository.flush();
 
 		// then
 		assertEquals(result.getClCode(), id);

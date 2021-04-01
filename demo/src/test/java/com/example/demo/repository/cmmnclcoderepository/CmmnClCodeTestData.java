@@ -43,6 +43,8 @@ public class CmmnClCodeTestData {
 		}
 
 		repository.saveAll(entities);
+
+//		repository.flush();
 	}
 
 }
