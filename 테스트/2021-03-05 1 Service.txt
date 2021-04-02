@@ -129,5 +129,15 @@ A6_selectAuthorRoleListTotCnt
 ---
 
 EgovUserDetailsSecurityServiceImpl.java
+egovuserdetailssecurityserviceimpl
+
+A1_getAuthenticatedUser
+A2_getAuthorities
+A3_isAuthenticated
+
+@WebAppConfiguration
+
+---
+
 EgovLoginPolicyServiceImpl.java
 EgovLoginServiceImpl.java
