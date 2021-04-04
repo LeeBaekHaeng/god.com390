@@ -42,7 +42,7 @@ class A5_delete {
 		// when
 		repository.deleteById(id);
 
-//		CmmnClCode one = repository.getOne(id);
+//		CmmnClCodeDto one = repository.getOne(id);
 		CmmnClCode one = repository.findById(id).orElseGet(CmmnClCode::empty);
 
 		// then

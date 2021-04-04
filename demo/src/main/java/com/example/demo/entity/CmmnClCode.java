@@ -10,6 +10,9 @@ import javax.persistence.Table;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
+import com.example.demo.dto.CmmnClCodeDto;
+import com.example.demo.dto.CmmnClCodeMapper;
+
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -65,6 +68,10 @@ public class CmmnClCode {
 		this.clCodeNm = clCodeNm;
 		this.lastUpdusrId = lastUpdusrId;
 		this.lastUpdtPnttm = lastUpdtPnttm;
+	}
+
+	public CmmnClCodeDto of() {
+		return CmmnClCodeMapper.INSTANCE.entityToDto(this);
 	}
 
 }

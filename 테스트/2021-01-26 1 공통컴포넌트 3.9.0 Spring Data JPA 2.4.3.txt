@@ -151,6 +151,10 @@ CmmnClCodeTestData 저장은 됨
 
 공통분류코드 Repository deleteById
 
+cmmnclcodeservice
+
+공통분류코드 Service save
+
 ---
 
 공통코드
