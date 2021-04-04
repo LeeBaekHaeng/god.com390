@@ -1,0 +1,54 @@
+Tomcat Connectors
+
+http://tomcat.apache.org/
+
+http://tomcat.apache.org/connectors-doc/
+
+http://tomcat.apache.org/connectors-doc/common_howto/quick.html
+
+https://tomcat.apache.org/download-80.cgi
+
+C:\test\apache-tomcat-8.5.64\bin
+startup.bat
+
+C:\test\apache-tomcat-8.5.64\bin>startup.bat
+Neither the JAVA_HOME nor the JRE_HOME environment variable is defined
+At least one of these environment variable is needed to run this program
+
+openjdk
+https://engineering.linecorp.com/ko/blog/line-open-jdk/
+
+https://adoptopenjdk.net/
+
+https://adoptopenjdk.net/releases.html?variant=openjdk8&jvmVariant=hotspot
+
+OpenJDK8U-jdk_x64_windows_hotspot_8u282b08.zip
+
+C:\test\jdk8u282-b08
+
+C:\test\jdk8u282-b08\bin>java -version
+openjdk version "1.8.0_282"
+OpenJDK Runtime Environment (AdoptOpenJDK)(build 1.8.0_282-b08)
+OpenJDK 64-Bit Server VM (AdoptOpenJDK)(build 25.282-b08, mixed mode)
+
+setenv.bat
+
+https://httpd.apache.org/download.cgi
+
+https://www.apachelounge.com/download/
+
+httpd-2.4.46-win64-VS16.zip
+
+C:\test\httpd-2.4.46-win64-VS16\Apache24\bin>httpd.exe
+httpd.exe: Syntax error on line 39 of C:/test/httpd-2.4.46-win64-VS16/Apache24/conf/httpd.conf: ServerRoot must be a valid directory
+
+#Define SRVROOT "c:/Apache24"
+Define SRVROOT "C:\test\httpd-2.4.46-win64-VS16\Apache24"
+
+C:\test\httpd-2.4.46-win64-VS16\Apache24\bin>httpd.exe
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::25b0:580c:a5b:b99c. Set the 'ServerName' directive globally to suppress this message
+
+https://archive.apache.org/dist/tomcat/tomcat-connectors/jk/binaries/windows/
+
+tomcat-connectors-1.2.40-windows-x86_64-httpd-2.4.x.zip
+
