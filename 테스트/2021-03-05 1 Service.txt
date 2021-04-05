@@ -136,6 +136,7 @@ A1_getAuthenticatedUser
 '인증된 사용자의 권한 정보를 가져온다.' Service 테스트
 A2_getAuthorities
 
+'인증된 사용자 여부를 체크한다.' Service 테스트
 A3_isAuthenticated
 
 @WebAppConfiguration
