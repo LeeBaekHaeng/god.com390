@@ -155,6 +155,8 @@ cmmnclcodeservice
 
 공통분류코드 Service save
 
+공통분류코드 Service findAll
+
 ---
 
 공통코드
