@@ -157,6 +157,8 @@ cmmnclcodeservice
 
 공통분류코드 Service findAll
 
+공통분류코드 Service findById
+
 ---
 
 공통코드

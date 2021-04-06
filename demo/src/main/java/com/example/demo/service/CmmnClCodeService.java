@@ -40,4 +40,8 @@ public class CmmnClCodeService {
 		return new PageImpl<>(content, pageable, page.getTotalElements());
 	}
 
+	public CmmnClCodeDto findById(String id) {
+		return repository.findById(id).orElseGet(CmmnClCode::empty).of();
+	}
+
 }
