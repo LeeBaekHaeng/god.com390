@@ -144,4 +144,18 @@ A3_isAuthenticated
 ---
 
 EgovLoginPolicyServiceImpl.java
+egovloginpolicyserviceimpl
+
+'로그인정책 목록을 조회한다.' Service 테스트
+A1_selectLoginPolicyList
+
+A2_selectLoginPolicyListTotCnt
+A3_selectLoginPolicy
+A4_insertLoginPolicy
+A5_updateLoginPolicy
+A6_deleteLoginPolicy
+A7_selectLoginPolicyResult
+
+---
+
 EgovLoginServiceImpl.java
