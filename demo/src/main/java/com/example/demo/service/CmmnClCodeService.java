@@ -44,4 +44,12 @@ public class CmmnClCodeService {
 		return repository.findById(id).orElseGet(CmmnClCode::empty).of();
 	}
 
+	@Transactional
+	public CmmnClCodeDto update(CmmnClCodeDto dto) {
+		log.debug("dto: {}", dto);
+		CmmnClCode find = repository.findById(dto.getClCode()).orElseGet(CmmnClCode::empty);
+		find.update(dto.getClCodeNm(), dto.getLastUpdtPnttm(), dto.getLastUpdusrId());
+		return find.of();
+	}
+
 }

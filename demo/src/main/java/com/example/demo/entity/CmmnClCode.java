@@ -70,6 +70,12 @@ public class CmmnClCode {
 		this.lastUpdtPnttm = lastUpdtPnttm;
 	}
 
+	public void update(String clCodeNm, LocalDateTime lastUpdtPnttm, String lastUpdusrId) {
+		this.clCodeNm = clCodeNm;
+		this.lastUpdtPnttm = lastUpdtPnttm;
+		this.lastUpdusrId = lastUpdusrId;
+	}
+
 	public CmmnClCodeDto of() {
 		return CmmnClCodeMapper.INSTANCE.entityToDto(this);
 	}

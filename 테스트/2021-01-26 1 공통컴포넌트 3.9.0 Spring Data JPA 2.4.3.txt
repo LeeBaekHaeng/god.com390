@@ -159,6 +159,8 @@ cmmnclcodeservice
 
 공통분류코드 Service findById
 
+공통분류코드 Service update
+
 ---
 
 공통코드
