@@ -149,7 +149,9 @@ egovloginpolicyserviceimpl
 '로그인정책 목록을 조회한다.' Service 테스트
 A1_selectLoginPolicyList
 
+'로그인정책 목록 수를 조회한다.' Service 테스트
 A2_selectLoginPolicyListTotCnt
+
 A3_selectLoginPolicy
 A4_insertLoginPolicy
 A5_updateLoginPolicy
