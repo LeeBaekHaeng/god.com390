@@ -161,6 +161,8 @@ cmmnclcodeservice
 
 공통분류코드 Service update
 
+공통분류코드 Service deleteById
+
 ---
 
 공통코드

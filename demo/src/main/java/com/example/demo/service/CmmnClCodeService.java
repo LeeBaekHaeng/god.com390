@@ -52,4 +52,9 @@ public class CmmnClCodeService {
 		return find.of();
 	}
 
+	@Transactional
+	public void deleteById(String id) {
+		repository.deleteById(id);
+	}
+
 }
