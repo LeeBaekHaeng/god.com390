@@ -155,7 +155,9 @@ A2_selectLoginPolicyListTotCnt
 ' 로그인정책 목록의 상세정보를 조회한다.' Service 테스트
 A3_selectLoginPolicy
 
+'로그인정책 정보를 신규로 등록한다.' Service 테스트
 A4_insertLoginPolicy
+
 A5_updateLoginPolicy
 A6_deleteLoginPolicy
 A7_selectLoginPolicyResult
