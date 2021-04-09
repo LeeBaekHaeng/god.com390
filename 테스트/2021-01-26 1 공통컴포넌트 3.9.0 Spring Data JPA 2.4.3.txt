@@ -168,6 +168,15 @@ cmmnclcodeservice
 공통코드
 comtccmmncode
 
+CmmnCode
+CmmnCodeRepository
+cmmncoderepository
+cmmncode
+
+공통코드 Repository save
+
+---
+
 공통상세코드
 comtccmmndetailcode
 
