@@ -185,6 +185,31 @@ private CmmnClCode cmmnClCode;
 
 ---
 
+spring.jpa.hibernate.ddl-auto
+hibernate.hbm2ddl.auto
+
+spring.jpa.hibernate.ddl-auto=none
+spring.jpa.hibernate.ddl-auto=create-only
+spring.jpa.hibernate.ddl-auto=drop
+spring.jpa.hibernate.ddl-auto=create
+spring.jpa.hibernate.ddl-auto=create-drop
+spring.jpa.hibernate.ddl-auto=validate
+spring.jpa.hibernate.ddl-auto=update
+
+https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html#spring.jpa.hibernate.ddl-auto
+
+hibernate.hbm2ddl.auto (e.g. none (default value), create-only, drop, create, create-drop, validate, and update)
+
+https://docs.jboss.org/hibernate/orm/5.4/userguide/html_single/Hibernate_User_Guide.html
+
+spring.jpa.hibernate.ddl-auto=update
+spring.datasource.url=jdbc:h2:mem:db1;DB_CLOSE_DELAY=-1;MVCC=TRUE
+spring.datasource.username=sa
+spring.datasource.password=
+https://spring.io/guides/gs/accessing-data-mysql/
+
+---
+
 공통상세코드
 comtccmmndetailcode
 
