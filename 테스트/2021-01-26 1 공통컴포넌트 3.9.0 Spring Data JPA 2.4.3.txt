@@ -237,7 +237,7 @@ https://www.h2database.com/html/tutorial.html
 
 Using the Server
 Connecting to the TCP Server
-Database URL: jdbc:h2:tcp://localhost/~/testjdbc:h2:tcp://localhost/~/test
+Database URL: jdbc:h2:tcp://localhost/~/test
 
 ---
 
