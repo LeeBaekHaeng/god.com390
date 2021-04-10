@@ -1,10 +1,13 @@
 package com.example.demo.entity;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.DynamicInsert;
@@ -59,6 +62,9 @@ public class CmmnClCode {
 
 	@Column(length = 20)
 	private String lastUpdusrId;
+
+	@OneToMany(mappedBy = "cmmnClCode")
+	private final List<CmmnCode> cmmnCodes = new ArrayList<>();
 
 	public static CmmnClCode empty() {
 		return new CmmnClCode();

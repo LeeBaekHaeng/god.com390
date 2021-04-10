@@ -249,6 +249,14 @@ application-local-h2.properties
 
 ---
 
+공통분류코드 @OneToMany
+
+failed to lazily initialize a collection of role could not initialize proxy - no session
+
+@Transactional(readOnly = true)
+
+---
+
 공통상세코드
 comtccmmndetailcode
 
