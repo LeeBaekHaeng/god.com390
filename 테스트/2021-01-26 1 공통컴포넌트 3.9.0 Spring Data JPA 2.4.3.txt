@@ -241,6 +241,14 @@ Database URL: jdbc:h2:tcp://localhost/~/test
 
 ---
 
+local h2
+
+local-h2
+
+application-local-h2.properties
+
+---
+
 공통상세코드
 comtccmmndetailcode
 
