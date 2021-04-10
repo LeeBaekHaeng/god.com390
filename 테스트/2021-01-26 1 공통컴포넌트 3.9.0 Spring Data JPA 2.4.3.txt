@@ -175,6 +175,14 @@ cmmncode
 
 공통코드 Repository save
 
+공통코드 분류코드 @ManyToOne
+
+CmmnClCode cmmnClCode = CmmnClCode.builder().clCode("GOD").build();
+
+@ManyToOne
+@JoinColumn(name = "CL_CODE", foreignKey = @ForeignKey(name = "COMTCCMMNCODE_FK1"))
+private CmmnClCode cmmnClCode;
+
 ---
 
 공통상세코드

@@ -4,7 +4,11 @@ import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.ForeignKey;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.DynamicInsert;
@@ -47,8 +51,12 @@ public class CmmnCode {
 	@Column(length = 1)
 	private String useAt;
 
-	@Column(length = 3)
-	private String clCode;
+//	@Column(length = 3)
+//	private String clCode;
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "CL_CODE", foreignKey = @ForeignKey(name = "COMTCCMMNCODE_FK1"))
+	private CmmnClCode cmmnClCode;
 
 	private LocalDateTime frstRegistPnttm;
 
@@ -59,5 +67,9 @@ public class CmmnCode {
 
 	@Column(length = 20)
 	private String lastUpdusrId;
+
+	public static CmmnCode empty() {
+		return new CmmnCode();
+	}
 
 }
