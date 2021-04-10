@@ -4,7 +4,6 @@ import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.ForeignKey;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -54,7 +53,7 @@ public class CmmnCode {
 //	@Column(length = 3)
 //	private String clCode;
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne
 	@JoinColumn(name = "CL_CODE", foreignKey = @ForeignKey(name = "COMTCCMMNCODE_FK1"))
 	private CmmnClCode cmmnClCode;
 
