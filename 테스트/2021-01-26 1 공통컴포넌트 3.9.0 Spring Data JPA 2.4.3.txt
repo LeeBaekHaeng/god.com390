@@ -210,6 +210,37 @@ https://spring.io/guides/gs/accessing-data-mysql/
 
 ---
 
+h2database 설치
+
+https://www.h2database.com/html/download.html
+
+Version 1.4.200 (2019-10-14)
+
+Platform-Independent Zip 
+
+h2-2019-10-14.zip
+
+C:\Users\god\Downloads\h2-2019-10-14\h2\bin
+h2.bat
+
+'java'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다.
+계속하려면 아무 키나 누르십시오 . . .
+
+C:\EGOVFRAME\eGovCI-3.8.0_64bit\bin\jdk1.8.0_162\bin\
+
+@C:\EGOVFRAME\eGovCI-3.8.0_64bit\bin\jdk1.8.0_162\bin\java -cp "h2-1.4.200.jar;%H2DRIVERS%;%CLASSPATH%" org.h2.tools.Console %*
+
+http://localhost:8082
+
+https://www.h2database.com/html/tutorial.html
+
+Using the Server
+Connecting to the TCP Server
+Database URL: jdbc:h2:tcp://localhost/~/testjdbc:h2:tcp://localhost/~/test
+
+---
+
 공통상세코드
 comtccmmndetailcode
 
