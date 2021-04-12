@@ -161,7 +161,9 @@ A4_insertLoginPolicy
 '기 등록된 로그인정책 정보를 수정한다.' Service 테스트
 A5_updateLoginPolicy
 
+'기 등록된 로그인정책 정보를 삭제한다.' Service 테스트
 A6_deleteLoginPolicy
+
 A7_selectLoginPolicyResult
 
 ---
