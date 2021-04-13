@@ -164,7 +164,9 @@ A5_updateLoginPolicy
 '기 등록된 로그인정책 정보를 삭제한다.' Service 테스트
 A6_deleteLoginPolicy
 
+'로그인정책에 대한 현재 반영되어 있는 결과를 조회한다.' Service 테스트
 A7_selectLoginPolicyResult
+@Deprecated
 
 ---
 
