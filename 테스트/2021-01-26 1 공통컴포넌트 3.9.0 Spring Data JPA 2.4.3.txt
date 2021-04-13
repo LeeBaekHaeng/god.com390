@@ -259,6 +259,10 @@ failed to lazily initialize a collection of role could not initialize proxy - no
 
 공통코드 Repository findAll
 
+공통코드 Repository findById
+
+공통코드 Repository update
+
 ---
 
 공통상세코드

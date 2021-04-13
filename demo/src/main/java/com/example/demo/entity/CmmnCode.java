@@ -71,4 +71,10 @@ public class CmmnCode {
 		return new CmmnCode();
 	}
 
+	public void update(String codeIdNm, LocalDateTime lastUpdtPnttm, String lastUpdusrId) {
+		this.codeIdNm = codeIdNm;
+		this.lastUpdtPnttm = lastUpdtPnttm;
+		this.lastUpdusrId = lastUpdusrId;
+	}
+
 }
