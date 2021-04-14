@@ -1,5 +1,7 @@
 package god.test.a1.service.impl;
 
+import java.util.List;
+
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
@@ -7,6 +9,7 @@ import org.springframework.ui.Model;
 import egovframework.rte.fdl.cmmn.EgovAbstractServiceImpl;
 import egovframework.rte.fdl.cmmn.exception.FdlException;
 import egovframework.rte.fdl.idgnr.EgovIdGnrService;
+import egovframework.rte.psl.dataaccess.util.EgovMap;
 import god.test.a1.service.A1VO;
 import god.test.a1.service.GodTestA1Service;
 
@@ -33,6 +36,14 @@ public class GodTestA1ServiceImpl extends EgovAbstractServiceImpl implements God
 		} catch (FdlException e) {
 			egovLogger.error(e.getMessage());
 		}
+	}
+
+	@Override
+	public List<EgovMap> selectList(A1VO vo) {
+		if (vo.getTableSchema() == null) {
+			vo.setTableSchema("com");
+		}
+		return dao.selectList(vo);
 	}
 
 	@Override
